@@ -1,5 +1,5 @@
 <?php
-namespace friendlrobot\core\mvc\control;
+namespace friendlyrobot\core\mvc\control;
 
 use \friendlyrobot\core\mvc\control\Modules as Modules;
 
