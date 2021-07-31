@@ -1,0 +1,180 @@
+.burger {
+	height: 3em;
+	width: 3em;
+	position: relative;
+	font-size: 12px;
+	cursor: pointer;
+	transition: .2s all;
+	-webkit-tap-highlight-color: transparent;
+
+	.burger-lines:after {
+		left: 0;
+		top: -1em;
+	}
+	.burger-lines:before {
+		left: 1em;
+		top: 1em;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 150%;
+		width: 150%;
+		top: -25%;
+		left: -25%;
+	}
+	.burger-lines {
+		top: 50%;
+		margin-top: -0.125em;
+		&,
+		&:after,
+		&:before {
+			pointer-events: none;
+			display: block;
+			content: '';
+			width: 100%;
+			border-radius: 0.25em;
+			background-color: white;
+			height: 0.25em;
+			position: absolute;
+			transform: rotate(0);
+		}
+		&:after {
+			left: 0;
+			top: -1em;
+		}
+		&:before {
+			left: 1em;
+			top: 1em;
+		}
+	}
+}
+
+.burger.burger-squeeze {
+	.burger-lines {
+		&,
+		&:after,
+		&:before {
+			transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s;
+		}
+		&:after,
+		&:before {
+			width: 2em;
+		}
+	}
+
+	&.open {
+		.burger-lines {
+			&,
+			&:after,
+			&:before {
+				transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
+			}
+			& {
+				background-color: transparent;
+			}
+			&:before,
+			&:after {
+				left: 0.5em;
+				top: 0px;
+			}
+			&:before {
+				transform: rotate(-45deg);
+			}
+			&:after {
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+/* media queries */
+@media screen and (max-width: 768px) {
+	#mobilenav {
+		padding: 0;
+		.navbar-nav li {
+			padding: 2vw 0;
+		}
+	}
+	#menu-main-menu {
+		display: none;
+	}
+	#menu-main-menu.nomobile {
+		display: flex;
+		flex-grow: 1;
+		justify-content: center;
+	}
+	#mobilenav_button {
+		display: flex;
+		position: relative;
+		left: 0;
+	}
+	#topmenu .navbar-brand {
+		position: fixed;
+		display: flex;
+		left: calc(50% - 60px);
+		width: 120px;
+		height: auto;
+	}
+	#topmenu.nomobile .navbar-brand {
+		position: relative;
+		display: flex;
+		left: 0;
+		width: 120px;
+		height: auto;
+	}
+	.siteheader {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 20px;
+		padding-right: 20px;
+		#topmenu {
+			z-index: 2;
+		}
+	}
+	#eyepolitic_mobile_menu.show {
+		display: block;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		background-color: black;
+		z-index: 1;
+		background-image: url('/theme/assets/paper-texture-solid.jpeg');
+		&:after {
+			content: '';
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			position: absolute;
+			opacity: 78%;
+			background-image: linear-gradient(315deg, #383031 14%, rgba(0, 0, 0, .4));
+			z-index: 1;
+		}
+		/*background-image: linear-gradient(315deg, #d42a2a 0%, #000000 74%);*/
+		.navbar-nav {
+			color: white;
+			font-size: 6.4vw;
+			z-index: 5;
+			flex-direction: column;
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			justify-content: center;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			z-index: 2;
+		}
+	}
+}

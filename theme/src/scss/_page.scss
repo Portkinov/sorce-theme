@@ -1,0 +1,16 @@
+@import 'variables';
+.hidden {
+	display: none;
+}
+
+@import 'components/components';
+
+@import 'pages/home';
+
+/* page header responsive */
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+	.starter-page .page-header {
+	}
+}
