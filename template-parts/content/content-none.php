@@ -1,5 +1,5 @@
 <?php
-use starter\Starter as Theme;
+ use friendlyrobot\Theme as Theme;
 /**
  * Template part for displaying a message that posts cannot be found
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/

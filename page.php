@@ -3,9 +3,9 @@
  * Template part for displaying page content in page.php
  * @package southportcapital
  */
-use starter\Starter as Theme;
-use starter\core\mvc\Model as Model;
-use starter\core\mvc\View as View;
+use friendlyrobot\Theme as Theme;
+use friendlyrobot\core\mvc\Model as Model;
+use friendlyrobot\core\mvc\View as View;
 
 get_header(); 
 

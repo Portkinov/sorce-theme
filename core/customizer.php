@@ -1,10 +1,10 @@
 <?php
-namespace starter\customizer;
-use starter\Starter as Theme ;
+namespace friendlyrobot\customizer;
+use friendlyrobot\Theme as Theme;
 /**
  * Customizer settings for this theme.
  *
- * @package starter
+ * @package friendlyrobot
  * 
  * https://wordpress.stackexchange.com/questions/71404/creating-a-rotating-header-image-slider-using-theme-customization 
  * 
@@ -12,8 +12,8 @@ use starter\Starter as Theme ;
 
  */
 
-if ( ! class_exists( '\starter\customizer\Theme_Customizer' ) ) {
-    add_action( 'init', array('\starter\customizer\Theme_Customizer', 'get_instance'), 10 );
+if ( ! class_exists( '\friendlyrobot\customizer\Theme_Customizer' ) ) {
+    add_action( 'init', array('\friendlyrobot\customizer\Theme_Customizer', 'get_instance'), 10 );
 
 	class Theme_Customizer extends Theme  {
         private static $instance = null;

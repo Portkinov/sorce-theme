@@ -1,5 +1,5 @@
  <?php
- use starter\Starter as Theme;
+ use friendlyrobot\Theme as Theme;
  ?>   
         
 

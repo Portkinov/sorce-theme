@@ -1,5 +1,5 @@
 <?php
-namespace starter\core;
+namespace friendlyrobot\core;
 
 /**
  * Arbitrary, reusable utility functions that you don't want to clutter the main functions file.

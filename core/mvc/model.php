@@ -1,5 +1,5 @@
 <?php
-namespace starter\core\mvc;
+namespace friendlyrobot\core\mvc;
 
 
 

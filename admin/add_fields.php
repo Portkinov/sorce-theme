@@ -1,16 +1,16 @@
 <?php
-namespace starter\admin;
+namespace friendlyrobot\admin;
 use \Carbon_Fields\Container as Container;
 use \Carbon_Fields\Field as Field;
-use \starter\core\mvc\Control as Control;
+use \friendlyrobot\core\mvc\Control as Control;
 
 require_once( get_template_directory() .  '/core/mvc/control/modules.php');
 require_once( get_template_directory() .  '/core/mvc/control/components.php');
 
-use \starter\core\mvc\control\Modules as Modules;
-use \starter\core\mvc\control\Components as Components;
+use \friendlyrobot\core\mvc\control\Modules as Modules;
+use \friendlyrobot\core\mvc\control\Components as Components;
 
-use \starter\Starter as Theme;
+use \friendlyrobot\Theme as Theme;
 
 /**
  * Add Carbon Fields
@@ -106,4 +106,4 @@ class AddFields extends Theme  {
 
 };
 
-\starter\admin\AddFields::run();
+\friendlyrobot\admin\AddFields::run();

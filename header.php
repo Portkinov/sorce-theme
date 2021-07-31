@@ -3,9 +3,9 @@
  * Header Template.
  *
  * <head> section until main.
- * @package starter
+ * @package friendlyrobot
  */
-use \starter\Starter as Theme;
+use friendlyrobot\Theme as Theme;
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

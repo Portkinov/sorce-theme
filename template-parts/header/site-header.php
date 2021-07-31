@@ -1,7 +1,7 @@
 <?php
 require_once \get_template_directory().'/classes/wp-bootstrap-navwalker.php'; 
 
-use \starter\Starter as Theme;
+use friendlyrobot\Theme as Theme;
 
 ?>
 <div class="container-fluid siteheader">

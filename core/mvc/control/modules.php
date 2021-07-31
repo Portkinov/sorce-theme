@@ -1,6 +1,6 @@
 <?php
-namespace starter\core\mvc\control;
-use \starter\Starter as Theme;
+namespace friendlyrobot\core\mvc\control;
+use friendlyrobot\Theme as Theme;
 
 
 #abstract class Modules {

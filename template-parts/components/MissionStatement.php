@@ -1,5 +1,5 @@
 <?php 
-namespace starter\components;
+namespace friendlyrobot\components;
 
 class MissionStatement{ 
 

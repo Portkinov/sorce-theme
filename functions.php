@@ -1,5 +1,5 @@
 <?php
-namespace starter; #should be same as textdomain
+namespace friendlyrobot; #should be same as textdomain
 use \Carbon_Fields\Container as Container;
 use \Carbon_Fields\Field as Field;
 //Config
@@ -7,13 +7,13 @@ use \Carbon_Fields\Field as Field;
 @ini_set( 'post_max_size', '24M');
 @ini_set( 'max_execution_time', '300' );
 /* 
- * Starter Base Class
+ * The Friendly Robot Base Class
  *
- * @package         starter
- * @author          Kitely Tech
+ * @package         thefriendlyrobot
+ * @author          Ben Toth
  * @license         Commercial
- * @link            https://kitelytech.com/
- * @copyright       2021 Starter
+ * @link            https://ben-toth.com
+ * @copyright       2021 FriendlyRobot
  *
  * @wordpress-theme Functions File
  * @BitBucketLink:  Add BitBucket address here
@@ -27,22 +27,22 @@ use \Carbon_Fields\Field as Field;
 
 defined( 'ABSPATH' ) OR exit;
 
-if ( ! class_exists( '\starter\Starter' ) ) {
+if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
     /**
     * Theme instantiated using the singleton pattern
     */
    
-    \add_action( 'after_setup_theme', array ( '\starter\Starter', 'get_instance' ), 1 );
+    \add_action( 'after_setup_theme', array ( '\friendlyrobot\Theme', 'get_instance' ), 1 );
     
-    class Starter {
+    class Theme {
  
         private static $instance = null;
 
         // Theme Settings Generic
         const version = '1.0.0';
         static $mode = 'development'; //accepts "development" and "production" arguments
-        const textdomain = 'starter'; // name of the theme ##
-        const nicename = 'Starter'; // Nice Name with caps & spaces for menus etc.
+        const textdomain = 'friendlyrobot'; // name of the theme ##
+        const nicename = 'Friendly Robot'; // Nice Name with caps & spaces for menus etc.
         static $logo_dimensions = array('width'=> 200, 'height' => 34 );
         //Instance
         public static function get_instance() 
@@ -99,7 +99,7 @@ if ( ! class_exists( '\starter\Starter' ) ) {
             \add_action( 'rest_api_init', function () {
                 register_rest_route( self::textdomain.'/v1', '/themeversion/', array(
                   'methods' => 'GET',
-                  'callback' => array('/starter/Starter', 'return_version'),
+                  'callback' => array('\friendlyrobot\Theme', 'return_version'),
                   'args' => array(
                     ),
                   ),
@@ -138,24 +138,7 @@ if ( ! class_exists( '\starter\Starter' ) ) {
         }
 
 
-        public static function add_page( $slug, $nicename){
-            $new_page_id = false;
-            $content = '';
-            //check if page currently exists
-            $page_check = \get_page_by_path($slug, OBJECT, 'branch');
-            $page = array(
-                    'post_type' => 'branch',
-                    'post_title' => $nicename,
-                    'post_content' => $content,
-                    'post_status' => 'publish',
-                    'post_name' => $slug
-            );
-            //if not, add it
-            if( !isset($page_check->ID) ){
-                $new_page_id = \wp_insert_post($page);
-            }
-            return $new_page_id;
-        }
+
 
         public static function add_theme_page( $slug, $name ){
             $new_page_id = false;
@@ -201,12 +184,7 @@ if ( ! class_exists( '\starter\Starter' ) ) {
         public static function add_theme_pages(){
             //add pages
             $frontpage = self::add_theme_page('front-page', ucfirst(self::textdomain) . ' home');
-            $services = self::add_theme_page( 'services', 'Services');
-            $corp401k = self::add_theme_page( 'corporate-401k', 'Corporate 401k');
-            $pilot = self::add_theme_page( 'pilot-services', 'Pilot Services');
-            $login = self::add_theme_page( 'client-login', 'Client Login');
-            $faq = self::add_theme_page( 'faq', 'Frequently Asked Questions');
-            $book = self::add_theme_page( 'our-book', 'Our Book');
+
             //assign static home page to homepage
             if($frontpage) self::assign_home_page($frontpage);
         }

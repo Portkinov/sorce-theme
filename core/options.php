@@ -1,6 +1,6 @@
 <?php
-namespace starter\options;
-use \starter\Starter as Theme ;
+namespace friendlyrobot\options;
+use friendlyrobot\Theme as Theme;
 use \Carbon_Fields\Container;
 use \Carbon_Fields\Field;
 
@@ -16,9 +16,9 @@ use \Carbon_Fields\Field;
 
  */
 
-if ( ! class_exists( '\starter\options\Starter_Options' ) ) {
+if ( ! class_exists( '\friendlyrobot\options\Robot_Options' ) ) {
     
-	class Starter_Options extends Theme {
+	class Robot_Options extends Theme {
         private static $instance = null;
         private $options;
         public static function get_instance(){
@@ -63,5 +63,5 @@ if ( ! class_exists( '\starter\options\Starter_Options' ) ) {
             
         }
 	}
-    \starter\options\Starter_Options::get_instance();
+    \friendlyrobot\options\Robot_Options::get_instance();
 }
