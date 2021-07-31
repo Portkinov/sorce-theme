@@ -1,5 +1,5 @@
-# this is theme-level so no worries about uploads or other wp-content files
 
+# this is theme-level so no worries about uploads or other wp-content files
 
 # ignore node dependency directories
 node_modules/
