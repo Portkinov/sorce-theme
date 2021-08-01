@@ -52,14 +52,14 @@ class TwoTiles {
             $markup.='<div class="row">';
             foreach($tiles as $tile){
                 $markup.= '<div class="col-12 col-md-6 tile">';
-                if($tiles['title']) $markup.='<h3 class="tiletitle">'.$tiles['title'].'</h3>';
-                if($tiles['image']){
+                if($tile['title']) $markup.='<h3 class="tiletitle">'.$tile['title'].'</h3>';
+                if($tile['image']){
                     $markup.= '<div class="tileimage" style="background-image:url(';
-                    $markup.= $tiles['image'].');"></div>';
+                    $markup.= $tile['image'].');"></div>';
                 }
-                if($tiles['text']) $markup.='<div class="tiletext">'.$tiles['text'].'</div>';
-                if($tiles['shortcode']){
-                    $markup.='<div class="tilecode">'.$tiles['shortcode'].'</div>';
+                if($tile['text']) $markup.='<div class="tiletext">'.$tile['text'].'</div>';
+                if($tile['shortcode']){
+                    $markup.='<div class="tilecode">'.$tile['shortcode'].'</div>';
                 }
                 $markup.='</div>';
             }   

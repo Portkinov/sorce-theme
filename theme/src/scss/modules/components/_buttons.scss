@@ -1,99 +1,18 @@
-$lighterblue: #e3f4fc;
-$buttonstate_border: rgba(0, 0, 0, 0.08);
-$primaryhover: #e0f1f9;
 /* BUTTONS */
+.btn {
+}
+
+.btn-primary {
+}
+.btn-secondary {
+}
+
 .button:focus,
 .navbar-toggler:focus,
 .button:active {
 	outline: none !important;
 	box-shadow: none !important;
 }
-.search-submit {
-	width: fit-content;
-}
-.button,
-.search-submit {
-	height: clamp(40px, 3.61vw, 52px);
-	background-color: $primary;
-	border-radius: 5px;
-	color: $text-light;
-	white-space: nowrap;
-	font-weight: 700;
-	border: 0;
-	font-size: clamp(12px, .833vw, 14px);
-	line-height: clamp(40px, 3.61vw, 52px);
-	padding-left: clamp(18px, 1.74vw, 25px);
-	padding-right: clamp(18px, 1.74vw, 25px);
-	&.arrow {
-		span {
-			padding: 0 15px;
-		}
-		&:after {
-			content: '';
-			background-image: url('/theme/assets/arrow-right.svg');
-			display: inline-block;
-			width: 12px;
-			height: 10px;
-		}
-	}
-	span {
-		font-weight: 700;
-		border: 0;
-		font-size: clamp(12px, .833vw, 14px);
-		line-height: clamp(40px, 3.61vw, 52px);
-		padding-left: clamp(18px, 1.74vw, 25px);
-		padding-right: clamp(18px, 1.74vw, 25px);
-	}
-	&.button-large {
-		padding-left: clamp(25px, 2.78vw, 40px);
-		padding-right: clamp(25px, 2.78vw, 40px);
-	}
-	&.button-primary {
-		width: fit-content;
-	}
-	&.button-pill {
-		height: clamp(36px, 2.9vw, 42px);
-		line-height: clamp(36px, 2.9vw, 42px);
-		border-radius: 500px;
-		width: fit-content;
-	}
-	&.button-clear {
-		color: $text-light;
-		border-radius: 500px;
-		background-color: transparent;
-		border: 1px solid $text-light;
-		padding-left: clamp(25px, 2.5vw, 36px);
-		padding-right: clamp(25px, 2.5vw, 36px);
-		line-height: clamp(36px, 3.61vw, 52px);
-	}
-}
-.buttonlink {
-	color: $text-light;
-	text-decoration: none;
-	&:hover,
-	&:active,
-	&:visited,
-	&.active {
-		text-decoration: none;
-		color: $text-light;
-	}
-}
-.button,
-.button a {
-	&:hover,
-	&:active,
-	&:visited,
-	&.active {
-		text-decoration: none;
-	}
-}
+
 @media screen and (max-width: 767px) {
-	.button.arrow {
-		span {
-			padding: 0;
-		}
-		&:after {
-			display: none;
-		}
-	}
 }

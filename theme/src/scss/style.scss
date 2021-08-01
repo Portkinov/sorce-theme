@@ -3,15 +3,13 @@
 @import 'typography';
 
 /* sections */
-@import 'colors';
-@import 'buttons';
-@import 'forms';
-@import 'sections/footer';
-@import 'sections/navigation';
-@import 'sections/carousel';
+@import 'modules/footer';
+@import 'modules/navigation';
+@import 'modules/carousel';
+@import 'modules/cards';
 
 /* modules */
-@import 'modules/modules';
+@import 'modules/components';
 
 /* pages - pages have precedence*/
 @import 'page';
@@ -21,10 +19,10 @@
 /* links */
 a {
 	text-decoration: none;
-	color: #004e7d;
+	color: $primary;
 	&:hover,
 	&:active {
-		color: #004e7d;
+		color: $primary;
 	}
 }
 html {

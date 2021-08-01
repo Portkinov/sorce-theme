@@ -41,7 +41,7 @@ if ( ! class_exists( '\friendlyrobot\customizer\Theme_Customizer' ) ) {
 			/* REMOVE THE STUFF WE DON'T NEED */
 
 			$wp_customize->remove_section("colors");
-			$wp_customize->remove_section("background_image");
+			$wp_customize->remove_section("header_image");
 			$wp_customize->remove_section("custom_css");
 
             /* HOME PAGE SLIDER */
@@ -375,12 +375,12 @@ if ( ! class_exists( '\friendlyrobot\customizer\Theme_Customizer' ) ) {
 
 				/* END TILES START SHORTCODE */
 
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'contactform_shortcode', array(
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'contactform_title', array(
 	
 					'type'    => 'text',
 					'section' => 'contactform',
-					'settings'=> 'contactform_shortcode',
-					'label'   => esc_html__( 'Contact Form Shortcode', self::textdomain ),
+					'settings'=> 'contactform_title',
+					'label'   => esc_html__( 'Contact Form Title', self::textdomain ),
 				))
 				);
 

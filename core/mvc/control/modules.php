@@ -20,7 +20,7 @@ use friendlyrobot\Theme as Theme;
         self::build_css_page($pagefilename);
     }
     private static function register_templates($pagename, $fields){
-        error_log(print_r($fields,true));
+
         $optionkey = $pagename . '_template_fields';
         $oldoptions = maybe_unserialize( \get_option($optionkey));
         if($oldoptions){
