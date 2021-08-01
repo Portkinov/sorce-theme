@@ -38,11 +38,17 @@ if ( ! class_exists( '\friendlyrobot\customizer\Theme_Customizer' ) ) {
 		 */
 		public static function register( $wp_customize ) {
 
+			/* REMOVE THE STUFF WE DON'T NEED */
+
+			$wp_customize->remove_section("colors");
+			$wp_customize->remove_section("background_image");
+			$wp_customize->remove_section("custom_css");
+
             /* HOME PAGE SLIDER */
 
             $wp_customize->add_panel( 'slides', array(
                 'title'          => 'Home Page Carousel',
-				'priority'       => 25,
+				'priority'       => 20,
 				'description'	=>		__('Home Page Carousel Slides and Options.', self::textdomain ),
 			) );
 
@@ -226,14 +232,20 @@ if ( ! class_exists( '\friendlyrobot\customizer\Theme_Customizer' ) ) {
 			/* HOME PAGE Modules */
 			$wp_customize->add_panel( 'modules', array(
 				'title'          => 'Home Page Modules',
-				'priority'       => 15,
+				'priority'       => 25,
 				'description'	=>		__('Home Page Modules.', self::textdomain ),
 			) );
 
 				/* sections */
-				$wp_customize->add_section( 'signup', array(
-					'title'          => 'Hero Section Signup Form',
-					'priority'       => 30,
+				$wp_customize->add_section( 'tiles', array(
+					'title'          => 'Home Page Double Tiles',
+					'priority'       => 20,
+					'panel'			 => 'modules'
+				) );
+
+				$wp_customize->add_section( 'contactform', array(
+					'title'          => 'Contact Form',
+					'priority'       => 20,
 					'panel'			 => 'modules'
 				) );
 
@@ -242,19 +254,141 @@ if ( ! class_exists( '\friendlyrobot\customizer\Theme_Customizer' ) ) {
 
 				/* settings */
 
-				$wp_customize->add_setting( 'hero_signup_shortcode', array(
+				$wp_customize->add_setting( 'tile_one_image', array(
+					'default'        => '',
+					
+				) );
+
+				$wp_customize->add_setting( 'tile_one_title', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+
+				$wp_customize->add_setting( 'tile_one_text', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+
+				$wp_customize->add_setting( 'tile_one_shortcode', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+
+				$wp_customize->add_setting( 'tile_two_image', array(
+					'default'        => '',
+					
+				) );
+				$wp_customize->add_setting( 'tile_two_title', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+
+				$wp_customize->add_setting( 'tile_two_text', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+
+				$wp_customize->add_setting( 'tile_two_shortcode', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+
+				$wp_customize->add_setting( 'contactform_title', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+
+				$wp_customize->add_setting( 'contactform_shortcode', array(
 					'default'        => '',
 					'sanitize_callback' => 'sanitize_text_field',
 				) );
 
 				/* controls */
 
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'tile_one_image', array(
+					'label'   => 'Left Tile Image',
+					'section' => 'tiles',
+					'settings'   => 'tile_one_image',
+				) ) );
 
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'hero_signup_shortcode', array(
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_one_title', array(
+					'type'    => 'text',
+					'section' => 'tiles',
+					'settings' => 'tile_one_title',
+					'label'   => esc_html__( 'Left Tile Title', self::textdomain ),
+
+				))
+				);
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_one_text', array(
+					'type'    => 'textarea',
+					'section' => 'tiles',
+					'settings' => 'tile_one_text',
+					'label'   => esc_html__( 'Left Tile Text', self::textdomain ),
+
+				))
+				);
+
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_one_shortcode', array(
 	
 					'type'    => 'text',
-					'section' => 'signup',
-					'settings'=> 'hero_signup_shortcode',
+					'section' => 'tiles',
+					'settings'=> 'tile_one_shortcode',
+					'label'   => esc_html__( 'Monthly Newsletter Form Shortcode', self::textdomain ),
+				))
+				);
+
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'modules', array(
+					'label'   => 'Right Tile Image',
+					'section' => 'tiles',
+					'settings'   => 'tile_two_image',
+				) ) );
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_two_title', array(
+					'type'    => 'text',
+					'section' => 'tiles',
+					'settings' => 'tile_two_title',
+					'label'   => esc_html__( 'Right Tile Title', self::textdomain ),
+
+				))
+				);
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_two_text', array(
+					'type'    => 'textarea',
+					'section' => 'tiles',
+					'settings' => 'tile_two_text',
+					'label'   => esc_html__( 'Right Tile Text', self::textdomain ),
+
+				))
+				);
+
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_one_shortcode', array(
+	
+					'type'    => 'text',
+					'section' => 'tiles',
+					'settings'=> 'tile_two_shortcode',
+					'label'   => esc_html__( 'Tell Us About Your Project Form Shortcode', self::textdomain ),
+				))
+				);
+
+				/* END TILES START SHORTCODE */
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'contactform_shortcode', array(
+	
+					'type'    => 'text',
+					'section' => 'contactform',
+					'settings'=> 'contactform_shortcode',
+					'label'   => esc_html__( 'Contact Form Shortcode', self::textdomain ),
+				))
+				);
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'contactform_shortcode', array(
+	
+					'type'    => 'text',
+					'section' => 'contactform',
+					'settings'=> 'contactform_shortcode',
 					'label'   => esc_html__( 'Contact Form Shortcode', self::textdomain ),
 				))
 				);
@@ -267,10 +401,11 @@ if ( ! class_exists( '\friendlyrobot\customizer\Theme_Customizer' ) ) {
 
 			$wp_customize->add_panel( 'featurecards', array(
 				'title'			=>		'Featured Items Cards',
-				'priority' 		=>		100,
+				'priority' 		=>		30,
 				'description'	=>		__('Four Image Cards linking Featured Collections of your services.', self::textdomain ),
 
 			));
+			
 
 				/* sections */
 			

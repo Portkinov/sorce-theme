@@ -68,7 +68,7 @@ if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
             \add_action( 'after_setup_theme', array(get_class(), 'add_theme_support'), 2);
 
             //add theme menus & pages
-            #\add_action( 'after_setup_theme', array(get_class(), 'add_theme_pages'), 5);
+            \add_action( 'after_setup_theme', array(get_class(), 'add_theme_pages'), 5);
             \add_action( 'after_setup_theme', array(get_class(), 'add_theme_menus'), 5);
 
             //add post types

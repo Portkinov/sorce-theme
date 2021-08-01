@@ -1,5 +1,5 @@
 <?php
-require_once \get_template_directory().'/classes/wp-bootstrap-navwalker.php'; 
+require_once \get_template_directory().'/core/wp-bootstrap-navwalker.php'; 
 
 use friendlyrobot\Theme as Theme;
 
