@@ -12,6 +12,7 @@ use friendlyrobot\components\ContactUs as ContactUs;
 
 /**
  * The home page
+ * trying with code
  *         
  */
 
