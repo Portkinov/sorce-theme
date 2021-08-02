@@ -49,8 +49,8 @@ jobs:
           DEPLOY_DIR: ~/deploy-from-github
           THEME_PATH: /home/bitnami/apps/wordpress/htdocs/wp-content/themes
         run: |
-              scp -v /var/tmp/$PLUGIN_NAME.zip staging:$DEPLOY_DIR
-              ssh staging "cd $DEPLOY_DIR;rm -rf $THEME_NAME.backup;mv $THEME_PATH/$THEME_NAME $THEME_NAME.backup;unzip $THEME_NAME.zip; mv $PLUGIN_NAME $THEME_PATH;"
+              scp -v /var/tmp/$THEME_NAME.zip staging:$DEPLOY_DIR
+              ssh staging "cd $DEPLOY_DIR;rm -rf $THEME_NAME.backup;mv $THEME_PATH/$THEME_NAME $THEME_NAME.backup;unzip $THEME_NAME.zip; mv $THEME_NAME $THEME_PATH;"
 
 
     # BEFORE I WAS JUST DOING IT IN A SERVER SIDE BASH SCRIPT BUT ITS MORE TRANSPARENT HERE FOR BETTER OR WORSE            
