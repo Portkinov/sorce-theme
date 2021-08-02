@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var path = require('path');
 
-const appname = 'eyepolitic';
+const appname = 'friendlyrobot';
 
 // change these variables to fit your project
 const publicPath = './theme/assets';

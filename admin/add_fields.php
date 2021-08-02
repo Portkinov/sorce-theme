@@ -30,13 +30,13 @@ class AddFields extends Theme  {
         \Carbon_Fields\Carbon_Fields::boot();
 
         \add_action( 'carbon_fields_register_fields', array(get_class(), 'theme_add_fields'), 1 );
-     #   \add_action( 'carbon_fields_register_fields', array(get_class(), 'theme_add_templates'), 5 );
+
     }
     public static function theme_add_fields() {
         if( class_exists('\Carbon_Fields\Container')){
 
             \add_action('carbon_fields_register_fields', array(get_class(), 'crb_add_term_meta' ) );
-            \add_action('carbon_fields_register_fields', array(get_class(), 'crb_services_page' ) );
+           # \add_action('carbon_fields_register_fields', array(get_class(), 'crb_services_page' ) );
 
         }
     }
@@ -58,6 +58,7 @@ class AddFields extends Theme  {
     }
     /* CARBON FIELDS PAGE FUNCTIONS */
     public static function crb_home_page(){
+        /*
         Container::make( 'post_meta', 'Custom Data' )
             ->where( 'post_id', '=', get_option( 'page_on_front' ) )
             ->add_fields( array( 
@@ -65,9 +66,10 @@ class AddFields extends Theme  {
                 ->set_type( 'video' )
                 ->set_value_type( 'url' ),
             ) );
+            */
     }
     public static function crb_services_page(){
-       
+       #example function showing both Container:: fields for Model and Modules:: for View
         $services_templates = array();
 
         Container::make('post_meta', 'Mission Statement')
@@ -79,8 +81,7 @@ class AddFields extends Theme  {
                 #       ->set_attribute( 'maxLength', 250 )
                     ->set_help_text('(Mission Statement in 250 characters or less)')
         ));
-        $services_templates['services_mssn_img'] = 'image';
-        $services_templates['services_mssn_text']= 'textarea';
+
         Modules::make('services', 'Mission Statement', 
             array(
                 Components::add_fields('image', 'services_mssn_img'),
