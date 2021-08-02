@@ -37,20 +37,20 @@ jobs:
       
       - name: Zip plugin
         env:
-          PLUGIN_NAME: friendlyrobot    
+          THEME_NAME: friendlyrobot    
         run: |
               cd $GITHUB_WORKSPACE/..
               # zip up the source
-              zip -r /var/tmp/$PLUGIN_NAME.zip $PLUGIN_NAME -x '*.git*'
+              zip -r /var/tmp/$THEME_NAME.zip $THEME_NAME -x '*.git*'
 
       - name: Copy Files
         env: 
-          PLUGIN_NAME: friendlyrobot
+          THEME_NAME: friendlyrobot
           DEPLOY_DIR: ~/deploy-from-github
-          PLUGIN_PATH: /home/bitnami/apps/wordpress/htdocs/wp-content/plugins
+          THEME_PATH: /home/bitnami/apps/wordpress/htdocs/wp-content/themes
         run: |
               scp -v /var/tmp/$PLUGIN_NAME.zip staging:$DEPLOY_DIR
-              ssh staging "cd $DEPLOY_DIR;rm -rf $PLUGIN_NAME.backup;mv $PLUGIN_PATH/$PLUGIN_NAME $PLUGIN_NAME.backup;unzip $PLUGIN_NAME.zip; mv $PLUGIN_NAME $PLUGIN_PATH;"
+              ssh staging "cd $DEPLOY_DIR;rm -rf $THEME_NAME.backup;mv $THEME_PATH/$THEME_NAME $THEME_NAME.backup;unzip $THEME_NAME.zip; mv $PLUGIN_NAME $THEME_PATH;"
 
 
     # BEFORE I WAS JUST DOING IT IN A SERVER SIDE BASH SCRIPT BUT ITS MORE TRANSPARENT HERE FOR BETTER OR WORSE            
