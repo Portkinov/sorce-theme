@@ -1,17 +1,12 @@
 .containerwrap.featured-services-cards {
     display: flex;
     width: 100%;
-
     .card {
-        position: absolute;
+        position: relative;
         width: 364px;
-        height: 123px;
-        left: 260px;
-        top: 1665px;
-
+        height: auto;
         background: #FFFFFF;
-        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
         border-radius: 10px;
     }
-
 }
