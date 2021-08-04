@@ -100,11 +100,9 @@ class Carousel {
     }
     private function returnCTA( $cta_url ){
         $return_blob = '';
-        if(false !== strpos($cta_url)){
-            $return_blob.='href="'.$cta_url.'"';
-        } else {
-            $return_blob.='onclick='.$cta_url.'(event);return false;';
-        }
+        
+        $return_blob.='href="'.$cta_url.'"';
+   
         return $return_blob;
     }
     private function returnSlide( $slide, $active, $number, $leftright){
