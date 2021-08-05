@@ -1,1 +1,28 @@
-#bsCarousel {}
+#bsCarousel {
+    text-align: center;
+    background-color: #003B47;
+}
+
+.carousel-text,
+.homeslide {
+    color: white;
+    text-align: left;
+}
+
+.btn-lg {
+    background-color: #FAC801;
+    color: black;
+    border-radius: 25px;
+    float: left;
+}
+
+.carousel-caption {
+    max-width: 511px;
+}
+
+.second-slide {
+    float: right;
+    max-width: 400px;
+    max-height: 300px;
+    margin: 50px;
+}

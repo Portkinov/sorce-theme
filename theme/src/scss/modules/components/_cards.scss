@@ -1,6 +1,7 @@
 .containerwrap.featured-services-cards {
     display: flex;
     width: 100%;
+
     .card {
         position: relative;
         width: 364px;
@@ -8,5 +9,21 @@
         background: #FFFFFF;
         box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
         border-radius: 10px;
+
+        // Rafi Modification
+        text-align: left;
+        display: block;
+        padding: 0 1.7rem;
+        width: 70%;
     }
+}
+
+.card-img,
+.card-img-top {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+
+    // Rafi Modification
+    max-width: 20%;
+
 }
