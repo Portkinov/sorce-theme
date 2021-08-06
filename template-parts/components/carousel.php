@@ -29,7 +29,7 @@ class Carousel {
     private function getHTML( $slides ){
         $do_arrows = \get_option('show_slide_arrows');
         $html = '<div id="'.self::$id.'" class="carousel slide carousel-fade" data-ride="carousel">';
-        $html.= self::returnIndicators($slides);
+       # $html.= self::returnIndicators($slides);
         $html.= self::returnItems($slides);
         if($do_arrows) $html.= self::returnArrows();
         $html.= '</div>';
