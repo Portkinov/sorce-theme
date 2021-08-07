@@ -1,6 +1,6 @@
 #bsCarousel {
-    text-align: center;
     background-color: #003B47;
+    text-align: center;
 }
 
 .carousel-text,
@@ -18,6 +18,9 @@
 
 .carousel-caption {
     max-width: 511px;
+    float: left;
+    text-align: left;
+    left: 92px;
 }
 
 .second-slide {
@@ -25,4 +28,10 @@
     max-width: 400px;
     max-height: 300px;
     margin: 50px;
+}
+
+.carousel-inner {
+    max-width: 1176px;
+    text-align: center;
+    margin: 0 24%;
 }
