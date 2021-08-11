@@ -108,7 +108,7 @@ class Carousel {
     private function returnSlide( $slide, $active, $number, $leftright){
         $isactive = ($active) ? ' active' : '';
         $slide_blob ='<div class="carousel-item'.$isactive.'">';
-        $slide_blob.='<img class='.$number.'-slide" ';
+        $slide_blob.='<img class='.$number.'-slide ';
         $slide_blob.='src="'.$slide['img_url'].'" alt="'.ucfirst($number).' Slide">';
         if( isset($slide['h1']) ||
             isset($slide['p']) ||
