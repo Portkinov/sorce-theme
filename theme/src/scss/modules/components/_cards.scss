@@ -20,7 +20,7 @@
         width: 364px;
         height: 123px;
         margin: 2%;
-
+        position: static;
     }
 }
 
@@ -39,6 +39,16 @@
 
 .card-title {
     text-align: left;
-    width: 19vw;
-    padding: 6%;
+    margin: 12% auto;
+    max-width: 84%;
+    font-size: 95%;
+    align-items: center;
+}
+
+.cardholder.marginbox {
+    display: contents;
+}
+
+.card-body {
+    position: sticky;
 }
