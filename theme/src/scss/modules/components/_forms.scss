@@ -2,38 +2,41 @@ h3.formtitle {}
 
 div .wpcf7 {
 
-	max-width: 480px;
-	display: inline-block;
+	max-width: 25%;
+	display: inline-table;
+	margin: 0 auto;
+	width: 100%;
+}
 
-	.wpcf7-form-control.wpcf7-submit {
-		padding: 1% 35%;
-		background: #FAC801;
-		box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
-		border-radius: 25px;
-		text-align: center;
-		align-items: center;
-		margin: 3% auto;
-		position: relative;
-		display: block;
+.wpcf7-form-control.wpcf7-submit {
+	padding: 1% 35%;
+	background: #FAC801;
+	box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
+	border-radius: 25px;
+	margin: 3% auto;
+	position: static;
+	width: 100%;
+}
+
+
+
+form.wpcf7-form {
+	display: grid;
+	text-align: left;
+	margin: 2% auto;
+
+	label {
+		display: grid;
+		text-align: left;
 	}
 
-
-
-	form.wpcf7-form {
+	input {
 		border-radius: 30px;
 
-		label {
-			display: grid;
-			text-align: left;
-		}
-
-		input {
-			border-radius: 30px;
-			padding: 1%;
-		}
-
-		select {}
 	}
+
+	select {}
+}
 }
 
 .containerwrap.contactus {
