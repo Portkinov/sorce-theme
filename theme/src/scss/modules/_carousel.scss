@@ -23,7 +23,6 @@
     max-width: 511px;
     margin-left: -3%;
     margin-right: 30%;
-
 }
 
 .second-slide {
@@ -34,7 +33,8 @@
 }
 
 .carousel-inner {
-    margin-left: 13%;
-    margin-right: 13%;
-    display: block;
+    width: 100%;
+    padding-left: 13%;
+    padding-right: 13%;
+
 }
