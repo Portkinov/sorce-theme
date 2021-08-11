@@ -8,7 +8,17 @@ div .wpcf7 {
 	form.wpcf7-form {
 		label {}
 
-		input {}
+		input {
+			padding: 1% 35%;
+			background: #FAC801;
+			box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
+			border-radius: 25px;
+			text-align: center;
+			align-items: center;
+			margin: 3% auto;
+			position: relative;
+			display: block;
+		}
 
 		select {}
 	}
