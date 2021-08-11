@@ -1,13 +1,28 @@
 #bsCarousel {
-    background-color: #003B47;
+    
     text-align: center;
-
+    .carousel-inner {
+        width: 100%;
+        padding: 0 13%;
+        background-color: #003B47;
+    }
     .second-slide {
         float: right;
         max-width: 400px;
         max-height: 300px;
         margin: 50px;
     }
+    &:after{
+        width: 100%;
+        content: '';
+        display: block;
+        height: 100px;
+        margin-top: -50px;
+        background-color: #003B47;
+        border-bottom: 50px;
+        border-radius: 50%;
+    }
+
 }
 
 .carousel-text,
@@ -34,8 +49,3 @@
 
 
 
-.carousel-inner {
-    width: 100%;
-    padding-left: 13%;
-    padding-right: 13%;
-}
