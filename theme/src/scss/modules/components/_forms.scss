@@ -6,9 +6,17 @@ div .wpcf7 {
 	display: inline-block;
 
 	form.wpcf7-form {
-		label {}
+		border-radius: 30px;
 
-		input {}
+		label {
+			display: grid;
+			text-align: left;
+		}
+
+		input {
+			border-radius: 30px;
+			padding: 1%;
+		}
 
 		select {}
 	}
