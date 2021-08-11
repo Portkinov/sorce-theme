@@ -1,17 +1,33 @@
 /* Tiles */
 .containerwrap.two-tiles {
+	background-color: #F8F8F8;
+	padding: 3%;
+
+
 	.tileimage {
-		width: 463px;
-		height: 197px;
+		max-width: 463px;
+		min-height: 197px;
 		background-repeat: no-repeat;
 		background-size: contain;
 		text-align: -webkit-center !important;
 		align-items: center !important;
+		/* text-decoration: none; */
+		/* align-items: center; */
+		margin-left: 15%;
 	}
 
 	.tile {
 		text-align: center;
 		align-items: center;
+		display: block;
+		background-color: white;
+		border-radius: 10px;
+		margin: 2%;
+		max-width: 607px;
+	}
+
+	.tiletitle {
+		margin-top: 3%;
 	}
 
 }
