@@ -1,10 +1,17 @@
 /* Tiles */
 .containerwrap.two-tiles {
 	.tileimage {
-		width: 558px;
-		height: 200px;
+		width: 463px;
+		height: 197px;
 		background-repeat: no-repeat;
 		background-size: contain;
+		text-align: -webkit-center !important;
+		align-items: center !important;
+	}
+
+	.tile {
+		text-align: center;
+		align-items: center;
 	}
 
 }
