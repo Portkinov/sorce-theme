@@ -4,18 +4,23 @@
     text-align: center;
 
     .card {
-        position: relative;
-        width: 364px;
-        height: auto;
-        background: #FFFFFF;
-        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
-        border-radius: 10px;
+        // position: relative;
+        // width: 364px;
+        // height: auto;
+        // background: #FFFFFF;
+        // box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
+        // border-radius: 10px;
 
         // Rafi Modification
-        // display: inline-block;
-        // margin: 20px;
-        // max-width: 25%;
-        // overflow: hidden;
+        position: relative;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 50px rgb(0 0 0 / 10%);
+        border-radius: 10px;
+        display: inline-block;
+        width: 364px;
+        height: 123px;
+        margin: 2%;
+
     }
 }
 
@@ -25,26 +30,15 @@
     border-top-right-radius: calc(0.25rem - 1px);
 
     // Rafi Modification
-    // max-width: 20%;
-    // float: left;
-    // position: absolute;
-    // left: 0;
-    // margin-left: 10%;
-    // bottom: 0;
-    // padding-top: 4%;
-    // margin-bottom: 11%;
-
+    width: 65px;
+    height: 64.97px;
+    text-align: left;
+    float: left;
+    margin: 7%;
 }
 
-// Rafi Modification
-.card-body {
-    // padding: 1rem;
-    // text-align: left;
-    // margin-left: 30%;
-    // max-width: 100%;
-    // float: right;
-    // width: 364px;
-    // height: 123px;
-    // padding-left: 34%;
-    // padding-top: 11%;
+.card-title {
+    text-align: left;
+    width: 19vw;
+    padding: 6%;
 }
