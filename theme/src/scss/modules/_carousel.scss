@@ -17,10 +17,13 @@
 }
 
 .carousel-caption {
+    // max-width: 511px;
+    // float: left;
+    // text-align: left;
     max-width: 511px;
-    float: left;
-    text-align: left;
-    left: 92px;
+    margin-left: -3%;
+    margin-right: 30%;
+
 }
 
 .second-slide {
@@ -31,7 +34,7 @@
 }
 
 .carousel-inner {
-    max-width: 1176px;
-    text-align: center;
-    margin: 0 24%;
+    margin-left: 13%;
+    margin-right: 13%;
+    display: block;
 }
