@@ -12,7 +12,6 @@
         // border-radius: 10px;
 
         // Rafi Modification
-        position: relative;
         background: #FFFFFF;
         box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
         border-radius: 10px;
@@ -51,4 +50,6 @@
 
 .card-body {
     position: sticky;
+    padding: 0;
+    flex: auto;
 }
