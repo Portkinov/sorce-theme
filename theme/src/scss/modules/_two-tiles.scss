@@ -1,8 +1,14 @@
 /* Tiles */
 .containerwrap.two-tiles {
+	.tileimage {
+		width: 558px;
+		height: 200px;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
 }
 
 @media screen and (max-width: 991px) {
-	.containerwrap.two-tiles {
-	}
+	.containerwrap.two-tiles {}
 }

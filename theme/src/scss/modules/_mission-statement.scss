@@ -1,8 +1,17 @@
 /* Tiles */
 .containerwrap.mission-statement {
+	.missionright {
+		font-size: 35px;
+	}
+
+	.missionleft {
+		max-width: 90%;
+		max-height: 90%;
+		text-align: center;
+	}
+
 }
 
 @media screen and (max-width: 991px) {
-	.containerwrap.mission-statement {
-	}
+	.containerwrap.mission-statement {}
 }
