@@ -1,18 +1,15 @@
 .containerwrap.contactus {
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background-image: url(~/theme/dist/css/img/formbackground.svg);
+	background-image: url(img/formbackground.svg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	width: 100%;
-	margin: 0 auto;
+	margin: 0 10%;
 	border-radius: 25px;
 
 	h3.formtitle {
 		text-align: center;
 		padding-top: 2%;
+		color: white;
 	}
 
 	.formcontainer {
