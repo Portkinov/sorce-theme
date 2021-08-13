@@ -1,24 +1,30 @@
 /* Tiles */
 .containerwrap.mission-statement {
 
-	margin: 0 auto;
-	width: 100%;
-	text-align: center;
+	// margin: 0 auto;
+	// width: 100%;
+	// text-align: center;
 
 	.missionright {
 		width: 75%;
 	}
 
-	.missionleft {
+	h2.missionleft,
+	div.missionleft {
 		// max-width: 90%;
 		// max-height: 90%;
 		// text-align: center;
 		// margin-left: 14%;
 		// margin-right: 14%;
-		float: left !important;
 		text-align: left;
 	}
 
+}
+
+.containerwrap.missionstatement {
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
 }
 
 @media screen and (max-width: 991px) {
