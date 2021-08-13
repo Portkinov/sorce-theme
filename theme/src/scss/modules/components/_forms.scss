@@ -36,9 +36,10 @@
 		}
 
 		form.wpcf7-form {
-			display: grid;
+			display: inline-grid;
 			text-align: left;
 			margin: 2% auto;
+			width: 100%;
 
 
 			label {
@@ -48,6 +49,7 @@
 
 			input {
 				border-radius: 30px;
+				width: 100%;
 			}
 
 		}

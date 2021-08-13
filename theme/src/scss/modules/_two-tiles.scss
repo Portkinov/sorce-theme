@@ -9,17 +9,17 @@
 		min-height: 197px;
 		background-repeat: no-repeat;
 		background-size: contain;
-		text-align: -webkit-center !important;
 		align-items: center !important;
-		margin-left: 12%;
+		margin: 0 auto;
+		width: 100%;
 	}
 
 	.tile {
 		text-align: center;
-		display: block;
+		display: inline-block;
 		background-color: white;
 		border-radius: 10px;
-		margin: 2%;
+		margin: 2% auto;
 		max-width: 607px;
 		padding-bottom: 3%;
 	}
