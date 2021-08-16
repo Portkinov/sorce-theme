@@ -1,0 +1,87 @@
+@import 'variables';
+@import 'colors';
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+// Font Variables
+$montserrat: 'Montserrat', Gotham, Roboto, sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+	font-family: $montserrat;
+	color: $text-dark;
+}
+h1 {
+	font-weight: 600;
+	font-size: clamp(40px, 3.47vw, 50px);
+	line-height: clamp(40px, 3.47vw, 50px);
+	letter-spacing: 0.2px;
+}
+h2 {
+	font-weight: 600;
+	font-size: clamp(32px, 2.78vw, 40px);
+	line-height: clamp(45px, 3.96vw, 57px);
+	letter-spacing: 0.2px;
+}
+h4 {
+	font-weight: 400;
+	font-size: clamp(18px, 1.67vw, 24px);
+	line-height: clamp(24px, 2.03vw, 29.26px);
+	letter-spacing: 0.2px;
+}
+h5 {
+	font-weight: 600;
+	font-size: clamp(16px, 1.39vw, 20px);
+	line-height: clamp(28px, 2.36vw, 34px);
+}
+.entry-content {
+	font-weight: 500;
+	font-size: clamp(16px, 1.39vw, 20px);
+	line-height: clamp(24px, 2.08vw, 30px);
+	letter-spacing: 0.2px;
+}
+.card-text {
+	font-weight: 400;
+	font-size: clamp(12px, .97vw, 14px);
+	line-height: clamp(15px, 1.18vw, 17.07px);
+}
+div,
+p {
+	font-size: clamp(14px, 1.11vw, 16px);
+	line-height: clamp(18px, 1.67vw, 24px);
+	letter-spacing: 0.2px;
+}
+h1.text-light,
+h2.text-light,
+h3.text-light,
+h4.text-light,
+h5.text-light,
+h6.text-light,
+p.text-light,
+div.text-light {
+	color: $text-light !important;
+}
+
+// Small devices (landscape phones, 576px and up)
+/* with clamps on all sizes we shouldn't need to do much media querying for typography */
+@media (max-width: 576px) {
+	
+}
+
+// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+//@media (min-width: 1400px) { ... }

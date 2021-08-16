@@ -1,0 +1,595 @@
+<html lang="en-US" class=" yzxlssx idc0_331">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- UNCOMMENT WHEN YOU ADD FAVICON <link rel="icon" href="http://localhost:8080/wordpress/wp-content/themes/friendlyrobot/theme/assets/favicon.svg"> -->
+    <meta name="description" content="">
+    <title>Friendly Robot – Just another WordPress site</title>
+    <meta name="robots" content="max-image-preview:large">
+    <link rel="dns-prefetch" href="//unpkg.com">
+    <link rel="dns-prefetch" href="//s.w.org">
+    <script>
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": "http:\/\/localhost:8080\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8"
+            }
+        };
+        ! function (e, a, t) {
+            var n, r, o, i = a.createElement("canvas"),
+                p = i.getContext && i.getContext("2d");
+
+            function s(e, t) {
+                var a = String.fromCharCode;
+                p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0);
+                e = i.toDataURL();
+                return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL()
+            }
+
+            function c(e) {
+                var t = a.createElement("script");
+                t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+            }
+            for (o = Array("flag", "emoji"), t.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                }, r = 0; r < o.length; r++) t.supports[o[r]] = function (e) {
+                if (!p || !p.fillText) return !1;
+                switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
+                    case "flag":
+                        return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([
+                            55356, 56826, 55356, 56819
+                        ], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418,
+                            56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447
+                        ], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203,
+                            56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447
+                        ]);
+                    case "emoji":
+                        return !s([10084, 65039, 8205, 55357, 56613], [10084, 65039, 8203, 55357, 56613])
+                }
+                return !1
+            }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t
+                .supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
+            t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t
+                .readyCallback = function () {
+                    t.DOMReady = !0
+                }, t.supports.everything || (n = function () {
+                    t.readyCallback()
+                }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load",
+                    n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () {
+                    "complete" === a.readyState && t.readyCallback()
+                })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji),
+                    c(n.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <script src="http://localhost:8080/wordpress/wp-includes/js/wp-emoji-release.min.js?ver=5.8" type="text/javascript"
+        defer=""></script>
+    <style>
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" id="wp-block-library-css"
+        href="http://localhost:8080/wordpress/wp-includes/css/dist/block-library/style.min.css?ver=5.8" media="all">
+    <style id="wp-block-library-theme-inline-css">
+        #start-resizable-editor-section {
+            display: none
+        }
+
+        .wp-block-audio figcaption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .wp-block-audio figcaption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .wp-block-code {
+            font-family: Menlo, Consolas, monaco, monospace;
+            color: #1e1e1e;
+            padding: .8em 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px
+        }
+
+        .wp-block-embed figcaption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .wp-block-embed figcaption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .blocks-gallery-caption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .blocks-gallery-caption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .wp-block-image figcaption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .wp-block-image figcaption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .wp-block-pullquote {
+            border-top: 4px solid;
+            border-bottom: 4px solid;
+            margin-bottom: 1.75em;
+            color: currentColor
+        }
+
+        .wp-block-pullquote__citation,
+        .wp-block-pullquote cite,
+        .wp-block-pullquote footer {
+            color: currentColor;
+            text-transform: uppercase;
+            font-size: .8125em;
+            font-style: normal
+        }
+
+        .wp-block-quote {
+            border-left: .25em solid;
+            margin: 0 0 1.75em;
+            padding-left: 1em
+        }
+
+        .wp-block-quote cite,
+        .wp-block-quote footer {
+            color: currentColor;
+            font-size: .8125em;
+            position: relative;
+            font-style: normal
+        }
+
+        .wp-block-quote.has-text-align-right {
+            border-left: none;
+            border-right: .25em solid;
+            padding-left: 0;
+            padding-right: 1em
+        }
+
+        .wp-block-quote.has-text-align-center {
+            border: none;
+            padding-left: 0
+        }
+
+        .wp-block-quote.is-large,
+        .wp-block-quote.is-style-large {
+            border: none
+        }
+
+        .wp-block-search .wp-block-search__label {
+            font-weight: 700
+        }
+
+        .wp-block-group.has-background {
+            padding: 1.25em 2.375em;
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        .wp-block-separator {
+            border: none;
+            border-bottom: 2px solid;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: .4
+        }
+
+        .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+            width: 100px
+        }
+
+        .wp-block-separator.has-background:not(.is-style-dots) {
+            border-bottom: none;
+            height: 1px
+        }
+
+        .wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots) {
+            height: 2px
+        }
+
+        .wp-block-table thead {
+            border-bottom: 3px solid
+        }
+
+        .wp-block-table tfoot {
+            border-top: 3px solid
+        }
+
+        .wp-block-table td,
+        .wp-block-table th {
+            padding: .5em;
+            border: 1px solid;
+            word-break: normal
+        }
+
+        .wp-block-table figcaption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .wp-block-table figcaption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .wp-block-video figcaption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .wp-block-video figcaption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .wp-block-template-part.has-background {
+            padding: 1.25em 2.375em;
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        #end-resizable-editor-section {
+            display: none
+        }
+    </style>
+    <link rel="stylesheet" id="contact-form-7-css"
+        href="http://localhost:8080/wordpress/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.2"
+        media="all">
+    <script src="https://unpkg.com/regenerator-runtime@0.12.1/runtime.js?ver=12.1" id="runtime-js"></script>
+    <script id="theme-js-js-extra">
+        var friendlyrobot = {
+            "ajaxurl": "http:\/\/localhost:8080\/wordpress\/wp-admin\/admin-ajax.php",
+            "mode": "development",
+            "friendlyrobot_nonce": "f90c459e68"
+        };
+    </script>
+    <script
+        src="http://localhost:8080/wordpress/wp-content/themes/friendlyrobot/theme/dist/js/friendlyrobot_js.js?ver=1.0.0"
+        id="theme-js-js"></script>
+    <link rel="https://api.w.org/" href="http://localhost:8080/wordpress/wp-json/">
+    <link rel="alternate" type="application/json" href="http://localhost:8080/wordpress/wp-json/wp/v2/pages/6">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost:8080/wordpress/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+        href="http://localhost:8080/wordpress/wp-includes/wlwmanifest.xml">
+    <meta name="generator" content="WordPress 5.8">
+    <link rel="canonical" href="http://localhost:8080/wordpress/">
+    <link rel="shortlink" href="http://localhost:8080/wordpress/">
+    <link rel="alternate" type="application/json+oembed"
+        href="http://localhost:8080/wordpress/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A8080%2Fwordpress%2F">
+    <link rel="alternate" type="text/xml+oembed"
+        href="http://localhost:8080/wordpress/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A8080%2Fwordpress%2F&amp;format=xml">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body class="home page-template-default page page-id-6 logged-in">
+    <div id="page" class="container-fluid site page">
+        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+        <div class="container-fluid siteheader">
+
+
+
+            <div id="topmenu" class="menu-fallback-container navbar navbar-expand-lg nomobile">
+                <ul class="menu-fallback-menu navbar-nav nomobile">
+                    <li class="nav-item"><a href="http://localhost:8080/wordpress/wp-admin/nav-menus.php"
+                            class="nav-link" title="Add a menu">Add a menu</a></li>
+                </ul>
+            </div>
+            <div class="topdonate">
+            </div>
+        </div>
+
+
+
+        <div id="content" class="site-content px-0 mx-0 container-fluid">
+
+
+
+            <!-- <div id="bsCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#bsCarousel" data-slide-to="0" class=" active"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><img class="second-slide&quot;"
+                            src="http://localhost:8080/wordpress/wp-content/uploads/2021/08/robot-slide.svg"
+                            alt="Second Slide">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1 class="homeslide"></h1>
+                                <p class="carousel-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div id="carouselExampleControls" class="carousel top-carousel slide mx-auto  my-5" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="http://localhost:8080/wordpress/wp-content/uploads/2021/08/robot-slide.svg"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="http://localhost:8080/wordpress/wp-content/uploads/2021/08/robot-slide.svg"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="http://localhost:8080/wordpress/wp-content/uploads/2021/08/robot-slide.svg"
+                            class="img-fluid" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <div class="container justify-content-center my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-4">
+                        <img src="https://dummyimage.com/600x500//808080/000" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <h1>Head Text</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam officiis, obcaecati dolore
+                            atque possimus ex eum qui quia placeat, excepturi reprehenderit. In ea eos magnam nesciunt,
+                            non ad sit praesentium!</p>
+                        <br>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam officiis, obcaecati
+                            dolore
+                            atque possimus ex eum qui quia placeat, excepturi reprehenderit. In ea eos magnam
+                            nesciunt,
+                            non ad sit praesentium!</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- <div class="modspacer container-fluid" style="padding-top:20px;"></div>
+            <div class="containerwrap missionstatement">
+                <div class="container component">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <img class="missionleft" src="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modspacer container-fluid" style="padding-top:50px;"></div>
+
+            <div class="containerwrap two-tiles">
+                <div class="container component">
+                    <div class="row">
+                        <div class="col-12 col-md-6 tile">
+                            <h3 class="tiletitle">Systems Integration</h3>
+                        </div>
+                        <div class="col-12 col-md-6 tile">
+                            <h3 class="tiletitle">Obsessed with Automation</h3>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- MIDDLE PAGE -->
+            <div class="container middle-page my-5">
+                <div class="row mx-auto justify-content-center mx-5">
+
+                    <div class="col my-5">
+                        <div class="card mx-auto align-items-center" style="width: 18rem;">
+                            <h5>System Integration</h5>
+                            <img src="https://dummyimage.com/600x300/808080/000" class="img-fluid" alt="...">
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="col my-5">
+                        <div class="card mx-auto align-items-center" style="width: 18rem;">
+                            <h5>Obsessed with Automation</h5>
+                            <img src="https://dummyimage.com/600x300/808080/000" class="img-fluid" alt="...">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- MIDDLE PAGE -->
+
+
+            <!-- <div class="modspacer container-fluid" style="padding-top:50px;"></div>
+            <div class="containerwrap featured-services-cards">
+                <div class="container-fluid component px-0 mx-0">
+                    <div class="row mx-0 px-0 d-flex justify-content-center">
+                        <div class="cardholder marginbox">
+                            <div class="card"><img class="card-img-top"
+                                    src="http://localhost:8080/wordpress/wp-content/uploads/2021/08/card1-icon.svg">
+                                <div class="card-body"></div>
+                            </div>
+                            <div class="card"><img class="card-img-top"
+                                    src="http://localhost:8080/wordpress/wp-content/uploads/2021/08/card2-icon.svg">
+                                <div class="card-body"></div>
+                            </div>
+                            <div class="card"><img class="card-img-top"
+                                    src="http://localhost:8080/wordpress/wp-content/uploads/2021/08/card3-icon.svg">
+                                <div class="card-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- CARD 3 OPTION -->
+            <div class="container my-5">
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="row mx-auto align-items-center">
+                            <div class="col-md">
+                                <img src="http://localhost:8080/wordpress/wp-content/uploads/2021/08/card1-icon.svg"
+                                    class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md">
+                                Designed For You
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="row mx-auto align-items-center">
+                            <div class="col-md">
+                                <img src="http://localhost:8080/wordpress/wp-content/uploads/2021/08/card2-icon.svg"
+                                    class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md">
+                                Small Scale Tech Solution
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="row mx-auto align-items-center">
+                            <div class="col-md">
+                                <img src="http://localhost:8080/wordpress/wp-content/uploads/2021/08/card3-icon.svg"
+                                    class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md">
+                                Work Less Do More
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- CARD 3 OPTION -->
+
+
+
+            <!-- <div class="modspacer container-fluid" style="padding-top:50px;"></div>
+            <br>
+            <b>Warning</b>: Undefined array key "shortcode" in
+            <b>C:\xampp\htdocs\wordpress\wp-content\themes\friendlyrobot\template-parts\components\contactus.php</b> on
+            line <b>14</b><br>
+            <div class="containerwrap contactus">
+                <div class="container component">
+                    <div class="row">
+                        <div class="col-12 formcontainer">
+                            <h3 class="formtitle">Let's Talk - Tell us about your project</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modspacer container-fluid" style="padding-top:50px;"></div> -->
+
+
+            <!-- CONTACT US -->
+            <div class="container-fluid justify-content-center align-items-center my-5 my-auto">
+                <h3 class="text-center">Let's Talk - Tell us about your Project</h3>
+                <div class="container justify-content-center align-items-center text-center my-auto">
+                    <form class="mx-auto align-items-center" style="max-width: 480px;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name"
+                                style="border-radius: 30px;">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Phone Number"
+                                style="border-radius: 30px;">
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input class="btn btn-block" type="submit" value="Submit"
+                                    style="background-color: #FAC801; border-radius: 25px;">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <!-- CONTACT US -->
+
+
+
+
+
+
+            <footer class=" theme-footer mx-0 px-0 container-fluid">
+                <section class="pre-footer-donate">
+                </section>
+                <section class="pre-footer">
+                </section>
+
+                <div class="row mx-0 d-flex flex-row footer-row footer-bottom">
+                    <div class="copyright">Copyright 2021 Friendly Robot</div>
+                </div>
+            </footer>
+        </div>
+        <script src="http://localhost:8080/wordpress/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7"
+            id="regenerator-runtime-js"></script>
+        <script src="http://localhost:8080/wordpress/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
+            id="wp-polyfill-js"></script>
+        <script id="contact-form-7-js-extra">
+            var wpcf7 = {
+                "api": {
+                    "root": "http:\/\/localhost:8080\/wordpress\/wp-json\/",
+                    "namespace": "contact-form-7\/v1"
+                }
+            };
+        </script>
+        <script src="http://localhost:8080/wordpress/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4.2"
+            id="contact-form-7-js"></script>
+        <script
+            src="http://localhost:8080/wordpress/wp-content/themes/friendlyrobot/theme/dist/js/friendlyrobot_footer.js?ver=1.0.0"
+            id="themefooter-js-js"></script>
+        <script src="http://localhost:8080/wordpress/wp-includes/js/wp-embed.min.js?ver=5.8" id="wp-embed-js">
+        </script>
+    </div>
+</body>
+
+</html>
