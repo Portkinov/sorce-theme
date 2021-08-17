@@ -5,12 +5,14 @@
     background-size: cover;
     margin: 0 10%;
     border-radius: 25px;
+    padding: 2.5%;
     h3.formtitle {
         text-align: center;
         color: white;
         width: 100%;
-        font-size: 160%;
+        // font-size: 160%;
         margin: 2% 0 0 0;
+        font-size: 2em;
     }
     .formcontainer {
         align-items: center;
@@ -28,7 +30,7 @@
             border-radius: 30px;
             align-items: center;
             margin: 1% 0 0 0;
-            padding: 1% 0;
+            padding: 2% 0;
         }
         form.wpcf7-form {
             display: inline-grid;
@@ -42,15 +44,23 @@
                 border-radius: 30px;
                 width: 100%;
                 margin: 2% auto;
-                padding: 0.5% 3%;
+                padding: 2% 3%;
                 .wpcf7-email {
-                    background-image: url("http://friendlyrobot.test/wp-content/uploads/2021/08/telephone-1.svg");
-                    // background-image: url(~/theme/dist/css/img/formbackground.svg);
-                    background-repeat: no-repeat;
-                    width: 10px;
-                    height: 10px;
+                    // background-image: url("http://friendlyrobot.test/wp-content/uploads/2021/08/telephone-1.svg");
+                    // // background-image: url(~/theme/dist/css/img/formbackground.svg);
+                    // background-repeat: no-repeat;
+                    // width: 10px;
+                    // height: 10px;
                 }
             }
+        }
+    }
+}
+
+@media (min-width: 48rem) {
+    .containerwrap.contactus {
+        h3.formtitle {
+            font-size: 2.25em;
         }
     }
 }
