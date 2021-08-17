@@ -1,0 +1,12 @@
+
+# this is theme-level so no worries about uploads or other wp-content files
+
+#node package
+package-lock.json
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
