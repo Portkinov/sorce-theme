@@ -1,0 +1,30 @@
+/* Tiles */
+
+.containerwrap.mission-statement {
+    // margin: 0 auto;
+    // width: 100%;
+    // text-align: center;
+    div.container.component {
+        width: 100%;
+        margin: 0 auto;
+        text-align-last: center;
+    }
+    div.col-12.col-md-6 {
+        img.missionleft {
+            vertical-align: middle;
+            max-width: 100vw;
+        }
+        // .missionright {
+        //     width: 75%;
+        // }
+        h2.missionright,
+        div.missionright {
+            text-align-last: left;
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .containerwrap.mission-statement {}
+}
