@@ -10,7 +10,7 @@
         color: white;
         width: 100%;
         font-size: 160%;
-        margin: 4% auto;
+        margin: 2% 0 0 0;
     }
     .formcontainer {
         align-items: center;
@@ -27,8 +27,8 @@
             width: 100%;
             border-radius: 30px;
             align-items: center;
-            margin: 5% 0 0 0;
-            padding: 1.5% 0;
+            margin: 1% 0 0 0;
+            padding: 1% 0;
         }
         form.wpcf7-form {
             display: inline-grid;
@@ -41,7 +41,15 @@
             input {
                 border-radius: 30px;
                 width: 100%;
-                margin: 0 auto;
+                margin: 2% auto;
+                padding: 0.5% 3%;
+                .wpcf7-email {
+                    background-image: url("http://friendlyrobot.test/wp-content/uploads/2021/08/telephone-1.svg");
+                    // background-image: url(~/theme/dist/css/img/formbackground.svg);
+                    background-repeat: no-repeat;
+                    width: 10px;
+                    height: 10px;
+                }
             }
         }
     }
