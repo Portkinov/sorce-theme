@@ -31,6 +31,10 @@
             align-items: center;
             margin: 1% 0 0 0;
             padding: 2% 0;
+            border-width: 0px;
+            border: none;
+            outline: none;
+            font-weight: 600;
         }
         form.wpcf7-form {
             display: inline-grid;
@@ -45,6 +49,9 @@
                 width: 100%;
                 margin: 2% auto;
                 padding: 2% 3%;
+                border-width: 0px;
+                border: none;
+                outline: none;
                 .wpcf7-email {
                     // background-image: url("http://friendlyrobot.test/wp-content/uploads/2021/08/telephone-1.svg");
                     // // background-image: url(~/theme/dist/css/img/formbackground.svg);
