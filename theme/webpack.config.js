@@ -1,11 +1,11 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+//const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var path = require('path');
 
 const appname = 'friendlyrobot';
 
 // change these variables to fit your project
-const publicPath = './theme/assets';
+//const publicPath = './theme/assets';
 const jsPath= './theme/src/js';
 const cssPath = './theme/src/scss';
 const outputPath = 'theme/dist';
@@ -28,17 +28,20 @@ module.exports = {
   devtool: 'inline-source-map',
   plugins: [
     new MiniCssExtractPlugin({
-      filename:'/css/[name].css',
+      filename:'css/[name].css',
     }),
-    // Uncomment this if you want to use CSS Live reload
     /*
+    // Uncomment this if you want to use CSS Live reload
+    
     new BrowserSyncPlugin({
       proxy: localDomain,
       files: [ outputPath + '/*.css' ],
       injectCss: true,
     }, { reload: false, }),
-    */
+     */
+
   ],
+ 
   module: {
     rules: [  
       {
@@ -60,6 +63,7 @@ module.exports = {
           'sass-loader'
         ]
       },
+      /*
       {
         test: /\.sass$/i,
         use: [
@@ -68,13 +72,14 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              url: false, 
+              url: true, 
               sourceMap: true,
               sassOptions: { indentedSyntax: true }
             }
           }
         ]
       },
+      */
       {
         test: /\.(jpg|jpeg|png|gif|woff|woff2|eot|ttf|svg)$/i,
         loader: 'file-loader',

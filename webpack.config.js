@@ -5,7 +5,7 @@ var path = require('path');
 const appname = 'friendlyrobot';
 
 // change these variables to fit your project
-const publicPath = './theme/assets';
+const publicPath = './theme/dist';
 const jsPath= './theme/src/js';
 const cssPath = './theme/src/scss';
 const outputPath = 'theme/dist';
@@ -51,7 +51,8 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      },      
+      }, 
+      /*     
       {
         test: /\.s?[c]ss$/i,
         use: [
@@ -60,6 +61,17 @@ module.exports = {
           'sass-loader'
         ]
       },
+      */
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+         // MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      /*
       {
         test: /\.sass$/i,
         use: [
@@ -75,6 +87,7 @@ module.exports = {
           }
         ]
       },
+      */
       {
         test: /\.(jpg|jpeg|png|gif|woff|woff2|eot|ttf|svg)$/i,
         loader: 'file-loader',

@@ -108,8 +108,15 @@ class Carousel {
     private function returnSlide( $slide, $active, $number, $leftright){
         $isactive = ($active) ? ' active' : '';
         $slide_blob ='<div class="carousel-item'.$isactive.'">';
+        if( !empty($slide['cta']) && !empty($slide['cta_txt']) ){
+            $slide_blob.='<p class="mobile-button"><a class="btn btn-lg btn-primary"';
+            $slide_blob.= self::returnCTA($slide['cta']).' role="button">';
+            $slide_blob.= $slide['cta_txt'].'</a></p>';       
+        } 
         $slide_blob.='<img class='.$number.'-slide ';
+
         $slide_blob.='src="'.$slide['img_url'].'" alt="'.ucfirst($number).' Slide">';
+
         if( isset($slide['h1']) ||
             isset($slide['p']) ||
             isset($slide['cta'])

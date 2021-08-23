@@ -1,63 +1,70 @@
-   #bsCarousel {
-       text-align: center;
-       .carousel-inner {
-           width: 100%;
-           padding: 0 25%;
-           background-color: #003B47;
-       }
-       .second-slide {
-           // float: right;
-           // max-width: 400px;
-           // max-height: 300px;
-           // margin: 50px;
-           float: right !important;
-           max-width: 50vw;
-           max-height: 300px;
-           margin: 5% auto;
-           display: grid;
-       }
-       &:after {
-           width: 100%;
-           content: '';
-           display: block;
-           height: 100px;
-           margin-top: -50px;
-           background-color: #003B47;
-           border-bottom: 50px;
-           border-radius: 50%;
-       }
-   }
-   
-   .carousel-text,
-   .homeslide {
-       // color: white;
-       // text-align: left;
-       color: white;
-       text-align: left;
-       display: grid;
-   }
-   
-   .btn-lg {
-       // background-color: #FAC801;
-       // color: black;
-       // border-radius: 25px;
-       // float: left;
-       background-color: #FAC801;
-       color: black;
-       border-radius: 25px;
-       float: left;
-       display: grid;
-   }
-   
-   .carousel-caption {
-       // max-width: 511px;
-       // float: left;
-       // text-align: left;
-       // -------------------------
-       // max-width: 511px;
-       // margin-left: -3%;
-       // margin-right: 30%;
-       max-width: 25vw;
-       margin: 5% 0;
-       left: 0;
-   }
+#bsCarousel {
+	h1 {
+		font-weight: 600;
+		font-size: clamp(30px, 2.71vw, 45px);
+		line-height: clamp(45px, 4.1vw, 68px);
+		letter-spacing: 0.2px;
+	}
+	.carousel-caption {
+		position: relative;
+	}
+	.carousel-text {
+		font-weight: 400;
+		font-size: clamp(12px, 0.843vw, 14px);
+	}
+
+	.carousel-inner {
+		width: 100%;
+		padding: 6.75vw 15.66vw;
+		background-color: #003b47;
+	}
+	.second-slide {
+		width: 28.49vw;
+		height: 17.59vw;
+		display: flex;
+	}
+	&:after {
+		width: 100%;
+		content: '';
+		display: block;
+		height: 100px;
+		margin-top: -50px;
+		background-color: #003b47;
+		border-bottom: 50px;
+		border-radius: 50%;
+	}
+}
+
+.carousel-text,
+.homeslide {
+	// color: white;
+	// text-align: left;
+	color: white;
+	text-align: left;
+	display: grid;
+}
+
+.btn-lg {
+	// background-color: #FAC801;
+	// color: black;
+	// border-radius: 25px;
+	// float: left;
+	background-color: #fac801;
+	color: black;
+	border-radius: 25px;
+	float: left;
+	display: grid;
+}
+
+.carousel-caption {
+	// max-width: 511px;
+	// float: left;
+	// text-align: left;
+	// -------------------------
+	// max-width: 511px;
+	// margin-left: -3%;
+	// margin-right: 30%;
+	max-width: 25vw;
+	margin: 5% 0;
+	left: 0;
+}

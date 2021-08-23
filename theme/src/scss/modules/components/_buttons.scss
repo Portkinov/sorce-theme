@@ -1,5 +1,9 @@
 /* BUTTONS */
 .btn {
+	padding: 0.9vw 4.58vw;
+	font-weight: 500;
+	font-family: $poppins;
+	font-size: clamp(12px, 0.843vw, 14px);
 }
 
 .btn-primary {
@@ -15,4 +19,7 @@
 }
 
 @media screen and (max-width: 767px) {
+	.btn {
+		padding: 12px 30px;
+	}
 }

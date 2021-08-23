@@ -10,9 +10,9 @@
 
 .home .site.page .siteheader {
 	position: relative;
+	background-color: $primary;
 	z-index: 8;
-	background-color: transparent;
-	position: absolute;
+	height: 41px;
 	&.sticky {
 		background-color: rgba(0, 0, 0, .64);
 	}

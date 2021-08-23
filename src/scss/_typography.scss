@@ -1,10 +1,10 @@
 @import 'variables';
 @import 'colors';
 // Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 // Font Variables
-$montserrat: 'Montserrat', Gotham, Roboto, sans-serif;
+$poppins: 'Poppins', 'Open Sans', sans-serif;
 
 h1,
 h2,
@@ -13,8 +13,10 @@ h4,
 h5,
 h6,
 p,
+span,
+html,
 div {
-	font-family: $montserrat;
+	font-family: $poppins;
 	color: $text-dark;
 }
 h1 {
@@ -71,7 +73,6 @@ div.text-light {
 // Small devices (landscape phones, 576px and up)
 /* with clamps on all sizes we shouldn't need to do much media querying for typography */
 @media (max-width: 576px) {
-	
 }
 
 // Medium devices (tablets, 768px and up)

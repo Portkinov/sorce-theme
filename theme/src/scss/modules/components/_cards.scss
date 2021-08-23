@@ -1,52 +1,52 @@
 .containerwrap.featured-services-cards {
-    display: flex;
-    width: 100%;
-    text-align: center;
-    .card {
-        // position: relative;
-        // width: 364px;
-        // height: auto;
-        // background: #FFFFFF;
-        // box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
-        // border-radius: 10px;
-        // Rafi Modification
-        background: #FFFFFF;
-        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
-        border-radius: 10px;
-        display: inline-block;
-        width: 364px;
-        height: 123px;
-        margin: 2%;
-        position: static;
-    }
+	display: flex;
+	width: 100%;
+	text-align: center;
+	.card {
+		// position: relative;
+		// width: 364px;
+		// height: auto;
+		// background: #FFFFFF;
+		// box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
+		// border-radius: 10px;
+		// Rafi Modification
+		background: #ffffff;
+		box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1%);
+		border-radius: 10px;
+		display: inline-block;
+		width: 364px;
+		height: 123px;
+		margin: 2%;
+		position: static;
+	}
 }
 
 .card-img,
 .card-img-top {
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-    // Rafi Modification
-    width: 65px;
-    height: 64.97px;
-    text-align: left;
-    float: left;
-    margin: 7%;
+	border-top-left-radius: calc(0.25rem - 1px);
+	border-top-right-radius: calc(0.25rem - 1px);
+	// Rafi Modification
+	width: 65px;
+	height: 64.97px;
+	text-align: left;
+	float: left;
+	margin: 7%;
 }
 
 .card-title {
-    text-align: left;
-    margin: 12% auto;
-    max-width: 84%;
-    font-size: 95%;
-    align-items: center;
+	text-align: left;
+	margin: 12% auto;
+	max-width: 84%;
+	font-size: 95%;
+	align-items: center;
 }
 
 .cardholder.marginbox {
-    display: contents;
+	display: contents;
 }
 
 .card-body {
-    position: sticky;
-    padding: 0;
-    flex: auto;
+	position: sticky;
+	padding: 0;
+	flex: auto;
 }
