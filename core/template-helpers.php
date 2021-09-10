@@ -1,11 +1,11 @@
 <?php
-namespace friendlyrobot\core;
+namespace sorce\core;
 
 /**
  * Arbitrary, reusable utility functions that you don't want to clutter the main functions file.
  * This is basically the theme's swiss army knife
  *
- * @package eyepolitic
+ * @package sorce
  * 
  * 
 
@@ -23,6 +23,17 @@ class TemplateHelpers {
      *
      * @author  maliayas
      */
+
+    public static function check_shortcode( $shortcode){
+        
+        if(!$shortcode) return false;
+
+        $executed = \do_shortcode( $shortcode );
+        #if the exectued shortcode is just the shortcode string - 
+        if($executed == $shortcode) return false;
+
+        return $executed;
+    }
 
     public static function Spacer( $paddingtop ){
         ?>

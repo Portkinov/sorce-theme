@@ -37,7 +37,7 @@ jobs:
       
       - name: Zip plugin
         env:
-          THEME_NAME: FriendlyRobotTheme   
+          THEME_NAME: Sorce  
         run: |
               cd $GITHUB_WORKSPACE/..
               # zip up the source
@@ -45,7 +45,7 @@ jobs:
 
       - name: Copy Files
         env: 
-          THEME_NAME: FriendlyRobotTheme
+          THEME_NAME: Sorce
           DEPLOY_DIR: ~/deploy-from-github
           THEME_PATH: /home/bitnami/apps/wordpress/htdocs/wp-content/themes
         run: |

@@ -1,6 +1,6 @@
 <?php
-namespace friendlyrobot\customizer;
-use friendlyrobot\Theme as Theme;
+namespace sorce\customizer;
+use sorce\Theme as Theme;
 /**
  * Customizer settings for this theme.
  *
@@ -12,8 +12,8 @@ use friendlyrobot\Theme as Theme;
 
  */
 
-if ( ! class_exists( '\friendlyrobot\customizer\Theme_Customizer' ) ) {
-    add_action( 'init', array('\friendlyrobot\customizer\Theme_Customizer', 'get_instance'), 10 );
+if ( ! class_exists( '\sorce\customizer\Theme_Customizer' ) ) {
+    add_action( 'init', array('\sorce\customizer\Theme_Customizer', 'get_instance'), 10 );
 
 	class Theme_Customizer extends Theme  {
         private static $instance = null;
@@ -44,640 +44,745 @@ if ( ! class_exists( '\friendlyrobot\customizer\Theme_Customizer' ) ) {
 			$wp_customize->remove_section("header_image");
 			$wp_customize->remove_section("custom_css");
 
-            /* HOME PAGE SLIDER */
-
-            $wp_customize->add_panel( 'slides', array(
-                'title'          => 'Home Page Carousel',
-				'priority'       => 20,
-				'description'	=>		__('Home Page Carousel Slides and Options.', self::textdomain ),
-			) );
-
-				/* sections */
-				$wp_customize->add_section('slides_one', array(
-					'title'          => 'Slide One',
-					'priority'       => 30,
-					'panel'			 => 'slides'
-				));
-	
-				$wp_customize->add_section('slides_two', array(
-					'title'          => 'Slide Two',
-					'priority'       => 30,
-					'panel'			 => 'slides'
-				));
-	
-				$wp_customize->add_section('slides_three', array(
-					'title'          => 'Slide Three',
-					'priority'       => 30,
-					'panel'			 => 'slides'
-				));
-
-				/* settings */
-				$wp_customize->add_setting( 'first_slide', array(
-					'default'        => '',
-				) );
-				$wp_customize->add_setting( 'second_slide', array(
-					'default'        => '',
-				) );
-				$wp_customize->add_setting( 'third_slide', array(
-					'default'        => '',
-				) );
-
-				$wp_customize->add_setting( 'first_slide_headline', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'second_slide_headline', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'third_slide_headline', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'first_slide_subhead', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'second_slide_subhead', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'third_slide_subhead', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'first_slide_cta_url', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'second_slide_cta_url', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'third_slide_cta_url', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'first_slide_cta_text', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'second_slide_cta_text', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'third_slide_cta_text', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-
-				/* controls */
-
-				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'first_slide', array(
-					'label'   => 'Slide Image',
-					'section' => 'slides_one',
-					'settings'   => 'first_slide',
-				) ) );
-				
-				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'second_slide', array(
-					'label'   => 'Slide Image',
-					'section' => 'slides_two',
-					'settings'   => 'second_slide',
-				) ) );
-				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'third_slide', array(
-					'label'   => 'Slide Image',
-					'section' => 'slides_three',
-					'settings'   => 'third_slide',
-				) ) );
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'first_slide_headline', array(
-					'type'    => 'text',
-					'section' => 'slides_one',
-					'label'   => esc_html__( 'Slide Headline', self::textdomain ),
-	
-				))
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'second_slide_headline', array(
-	
-					'type'    => 'text',
-					'section' => 'slides_two',
-					'label'   => esc_html__( 'Slide Headline', self::textdomain ),
-				))
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'third_slide_headline', array(
-	
-					'type'    => 'text',
-					'section' => 'slides_three',
-					'label'   => esc_html__( 'Slide Headline', self::textdomain ),
-				))
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'first_slide_subhead', array(
-	
-					'type'    => 'text',
-					'section' => 'slides_one',
-					'label'   => esc_html__( 'Slide Sub Headline', self::textdomain ),
-				))
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'second_slide_subhead', array(
-	
-					'type'    => 'text',
-					'section' => 'slides_two',
-					'label'   => esc_html__( 'Slide Sub Headline', self::textdomain ),
-				))
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'third_slide_subhead', array(
-					'type'    => 'text',
-					'section' => 'slides_three',
-					'label'   => esc_html__( 'Slide Sub Headline', self::textdomain ),
-				))
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'first_slide_cta_url', array(
-					'type'    => 'text',
-					'section' => 'slides_one',
-					'label'   => esc_html__( 'Call To Action - URL or javascript function on Button click', self::textdomain ),
-				) )
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'second_slide_cta_url', array(
-					'type'    => 'text',
-					'section' => 'slides_two',
-					'label'   => esc_html__( 'Call To Action - URL or javascript function on Button click', self::textdomain ),
-				))
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'third_slide_cta_url', array(
-					'type'    => 'text',
-					'section' => 'slides_three',
-					'label'   => esc_html__( 'Call To Action - URL or javascript function on Button click', self::textdomain ),
-				))
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'first_slide_cta_text', array(
-					'type'    => 'text',
-					'section' => 'slides_one',
-					'label'   => esc_html__( 'Slide Button Text', self::textdomain ),
-				))
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'second_slide_cta_text', array(
-					'type'    => 'text',
-					'section' => 'slides_two',
-					'label'   => esc_html__( 'Slide Button Text', self::textdomain ),
-				))
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'third_slide_cta_text', array(
-					'type'    => 'text',
-					'section' => 'slides_three',
-					'label'   => esc_html__( 'Slide Button Text', self::textdomain ),
-				))
-				);
-			/* END HOME PAGE CAROUSEL */
 
 			/* HOME PAGE Modules */
 			$wp_customize->add_panel( 'modules', array(
 				'title'          => 'Home Page Modules',
-				'priority'       => 25,
+				'priority'       => 15,
 				'description'	=>		__('Home Page Modules.', self::textdomain ),
 			) );
 
 				/* sections */
-				$wp_customize->add_section( 'tiles', array(
-					'title'          => 'Home Page Double Tiles',
+				$wp_customize->add_section( 'box1', array(
+					'title'          => 'Box One',
 					'priority'       => 20,
 					'panel'			 => 'modules'
 				) );
 
-				$wp_customize->add_section( 'contactform', array(
-					'title'          => 'Contact Form',
+				$wp_customize->add_section( 'box2', array(
+					'title'          => 'Box Two',
 					'priority'       => 20,
 					'panel'			 => 'modules'
 				) );
-
+								$wp_customize->add_section( 'box3', array(
+					'title'          => 'Box Three',
+					'priority'       => 20,
+					'panel'			 => 'modules'
+				) );
+				$wp_customize->add_section( 'box4', array(
+					'title'          => 'Box Four',
+					'priority'       => 20,
+					'panel'			 => 'modules'
+				) );
+				$wp_customize->add_section( 'box5', array(
+					'title'          => 'Box Five',
+					'priority'       => 20,
+					'panel'			 => 'modules'
+				) );
+				$wp_customize->add_section( 'box6', array(
+					'title'          => 'Box Six',
+					'priority'       => 20,
+					'panel'			 => 'modules'
+				) );
+				$wp_customize->add_section( 'box7', array(
+					'title'          => 'Box Seven',
+					'priority'       => 20,
+					'panel'			 => 'modules'
+				) );
+				$wp_customize->add_section( 'box8', array(
+					'title'          => 'Box Eight',
+					'priority'       => 20,
+					'panel'			 => 'modules'
+				) );
 
 				
 
 				/* settings */
 
-				$wp_customize->add_setting( 'tile_one_image', array(
+				$wp_customize->add_setting( 'box_one_image', array(
 					'default'        => '',
 					
 				) );
 
-				$wp_customize->add_setting( 'tile_one_title', array(
+				$wp_customize->add_setting( 'box_one_title', array(
 					'default'        => '',
 					'sanitize_callback' => 'sanitize_text_field',
 				) );
 
-				$wp_customize->add_setting( 'tile_one_text', array(
+				$wp_customize->add_setting( 'box_one_text', array(
 					'default'        => '',
 					'sanitize_callback' => 'sanitize_text_field',
 				) );
 
-				$wp_customize->add_setting( 'tile_one_shortcode', array(
+				$wp_customize->add_setting( 'box_one_video', array(
 					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
 				) );
 
-				$wp_customize->add_setting( 'tile_two_image', array(
+				$wp_customize->add_setting( 'box_two_image', array(
 					'default'        => '',
 					
 				) );
-				$wp_customize->add_setting( 'tile_two_title', array(
+				$wp_customize->add_setting( 'box_two_title', array(
 					'default'        => '',
 					'sanitize_callback' => 'sanitize_text_field',
 				) );
 
-				$wp_customize->add_setting( 'tile_two_text', array(
+				$wp_customize->add_setting( 'box_two_description', array(
 					'default'        => '',
 					'sanitize_callback' => 'sanitize_text_field',
 				) );
 
-				$wp_customize->add_setting( 'tile_two_shortcode', array(
+				$wp_customize->add_setting( 'box_two_list_one', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_two_list_two', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_two_list_three', array(
 					'default'        => '',
 					'sanitize_callback' => 'sanitize_text_field',
 				) );
 
-				$wp_customize->add_setting( 'contactform_title', array(
+				$wp_customize->add_setting( 'box_two_video', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_three_image', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_three_title', array(
 					'default'        => '',
 					'sanitize_callback' => 'sanitize_text_field',
 				) );
 
-				$wp_customize->add_setting( 'contactform_shortcode', array(
+				$wp_customize->add_setting( 'box_three_text', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_four_image', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_four_title', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_four_text', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_four_video', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_four_overlay_title', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_four_overlay_buttontext', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_four_overlay_buttonurl', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_five_cards_title', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_five_cards_one_image', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_five_cards_one_title', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_five_cards_one_text', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_five_cards_two_image', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_five_cards_two_title', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_five_cards_two_text', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_five_cards_three_image', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_five_cards_three_title', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_five_cards_three_text', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_six_quote', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_six_attribution', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_title', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_logo_one', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_seven_logo_two', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_seven_logo_three', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_seven_logo_four', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_seven_logo_five', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_one_headshot', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_one_name', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_one_jobtitle', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_one_quote', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_two_headshot', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_two_name', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_two_jobtitle', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_two_quote', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_three_headshot', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_three_name', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_three_jobtitle', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_three_quote', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_four_headshot', array(
+					'default'        => '',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_four_name', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_four_jobtitle', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_seven_quote_four_quote', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+
+				$wp_customize->add_setting( 'box_eight_title', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_eight_buttontext', array(
+					'default'        => '',
+					'sanitize_callback' => 'sanitize_text_field',
+				) );
+				$wp_customize->add_setting( 'box_eight_buttonurl', array(
 					'default'        => '',
 					'sanitize_callback' => 'sanitize_text_field',
 				) );
 
 				/* controls */
 
-				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'tile_one_image', array(
-					'label'   => 'Left Tile Image',
-					'section' => 'tiles',
-					'settings'   => 'tile_one_image',
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_one_image', array(
+					'label'   => 'Box One Right Image',
+					'section' => 'box1',
+					'settings'   => 'box_one_image',
 				) ) );
 
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_one_title', array(
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_one_title', array(
 					'type'    => 'text',
-					'section' => 'tiles',
-					'settings' => 'tile_one_title',
-					'label'   => esc_html__( 'Left Tile Title', self::textdomain ),
+					'section' => 'box1',
+					'settings' => 'box_one_title',
+					'label'   => esc_html__( 'Box One Title', self::textdomain ),
 
 				))
 				);
 
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_one_text', array(
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_one_text', array(
 					'type'    => 'textarea',
-					'section' => 'tiles',
-					'settings' => 'tile_one_text',
+					'section' => 'box1',
+					'settings' => 'box_one_text',
 					'label'   => esc_html__( 'Left Tile Text', self::textdomain ),
 
 				))
 				);
 
 
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_one_shortcode', array(
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_one_video', array(
 	
 					'type'    => 'text',
-					'section' => 'tiles',
-					'settings'=> 'tile_one_shortcode',
-					'label'   => esc_html__( 'Monthly Newsletter Form Shortcode', self::textdomain ),
+					'section' => 'box1',
+					'settings'=> 'box_one_video',
+					'label'   => esc_html__( 'URL of the Video', self::textdomain ),
 				))
 				);
 
-				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'modules', array(
-					'label'   => 'Right Tile Image',
-					'section' => 'tiles',
-					'settings'   => 'tile_two_image',
+				/* END BOX ONE */
+
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_two_image', array(
+					'label'   => 'Box Two Left Image',
+					'section' => 'box2',
+					'settings'   => 'box_two_image',
 				) ) );
 
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_two_title', array(
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_two_title', array(
 					'type'    => 'text',
-					'section' => 'tiles',
-					'settings' => 'tile_two_title',
-					'label'   => esc_html__( 'Right Tile Title', self::textdomain ),
+					'section' => 'box2',
+					'settings' => 'box_two_title',
+					'label'   => esc_html__( 'Box Two Title', self::textdomain ),
 
 				))
 				);
 
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_two_text', array(
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_two_description', array(
 					'type'    => 'textarea',
-					'section' => 'tiles',
-					'settings' => 'tile_two_text',
-					'label'   => esc_html__( 'Right Tile Text', self::textdomain ),
+					'section' => 'box2',
+					'settings' => 'box_two_description',
+					'label'   => esc_html__( 'Box Two Description', self::textdomain ),
 
 				))
 				);
 
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_two_list_one', array(
+					'type'    => 'textarea',
+					'section' => 'box2',
+					'settings' => 'box_two_list_one',
+					'label'   => esc_html__( 'Box Two First Bullet Point', self::textdomain ),
 
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'tile_one_shortcode', array(
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_two_list_two', array(
+					'type'    => 'textarea',
+					'section' => 'box2',
+					'settings' => 'box_two_list_two',
+					'label'   => esc_html__( 'Box Two Second Bullet Point', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_two_list_three', array(
+					'type'    => 'textarea',
+					'section' => 'box2',
+					'settings' => 'box_two_list_three',
+					'label'   => esc_html__( 'Box Two Third Bullet Point', self::textdomain ),
+
+				))
+				);
+				
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_two_video', array(
 	
 					'type'    => 'text',
-					'section' => 'tiles',
-					'settings'=> 'tile_two_shortcode',
-					'label'   => esc_html__( 'Tell Us About Your Project Form Shortcode', self::textdomain ),
+					'section' => 'box2',
+					'settings'=> 'box_two_video',
+					'label'   => esc_html__( 'URL of the Video', self::textdomain ),
 				))
 				);
 
-				/* END TILES START SHORTCODE */
+				/* END BOX TWO */
 
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'contactform_title', array(
-	
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_three_image', array(
+					'label'   => 'Box Three Left Image',
+					'section' => 'box3',
+					'settings'   => 'box_three_image',
+				) ) );
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_three_title', array(
 					'type'    => 'text',
-					'section' => 'contactform',
-					'settings'=> 'contactform_title',
-					'label'   => esc_html__( 'Contact Form Title', self::textdomain ),
+					'section' => 'box3',
+					'settings' => 'box_three_title',
+					'label'   => esc_html__( 'Box Three Title', self::textdomain ),
+
 				))
 				);
 
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'contactform_shortcode', array(
-	
-					'type'    => 'text',
-					'section' => 'contactform',
-					'settings'=> 'contactform_shortcode',
-					'label'   => esc_html__( 'Contact Form Shortcode', self::textdomain ),
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_three_text', array(
+					'type'    => 'textarea',
+					'section' => 'box3',
+					'settings' => 'box_three_text',
+					'label'   => esc_html__( 'Box Three Text', self::textdomain ),
+
 				))
 				);
+				/* END BOX THREE */
+
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_four_image', array(
+					'label'   => 'Box Four Right Image',
+					'section' => 'box4',
+					'settings'   => 'box_four_image',
+				) ) );
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_four_title', array(
+					'type'    => 'text',
+					'section' => 'box4',
+					'settings' => 'box_four_title',
+					'label'   => esc_html__( 'Box Four Title', self::textdomain ),
+
+				))
+				);
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_four_text', array(
+					'type'    => 'textarea',
+					'section' => 'box4',
+					'settings' => 'box_four_text',
+					'label'   => esc_html__( 'Box Four Text', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_four_video', array(
+					'type'    => 'text',
+					'section' => 'box4',
+					'settings' => 'box_four_video',
+					'label'   => esc_html__( 'URL of the Video', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_four_overlay_title', array(
+					'type'    => 'text',
+					'section' => 'box4',
+					'settings' => 'box_four_overlay_title',
+					'label'   => esc_html__( 'Bottom Overlay Call to Action', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_four_overlay_buttontext', array(
+					'type'    => 'text',
+					'section' => 'box4',
+					'settings' => 'box_four_overlay_buttontext',
+					'label'   => esc_html__( 'Bottom Overlay Button Text', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_four_overlay_buttonurl', array(
+					'type'    => 'text',
+					'section' => 'box4',
+					'settings' => 'box_four_overlay_buttonurl',
+					'label'   => esc_html__( 'Bottom Overlay URL', self::textdomain ),
+
+				))
+				);
+				
+
+				/* END BOX Four */
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_five_cards_title', array(
+					'type'    => 'text',
+					'section' => 'box5',
+					'settings' => 'box_five_cards_title',
+					'label'   => esc_html__( 'Box Five Title', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_five_cards_one_image', array(
+					'label'   => 'Card One Image',
+					'section' => 'box5',
+					'settings'   => 'box_five_cards_one_image',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_five_cards_one_title', array(
+					'type'    => 'text',
+					'section' => 'box5',
+					'settings' => 'box_five_cards_one_title',
+					'label'   => esc_html__( 'Card One Title', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_five_cards_one_text', array(
+					'type'    => 'textarea',
+					'section' => 'box5',
+					'settings' => 'box_five_cards_one_text',
+					'label'   => esc_html__( 'Card One Text', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_five_cards_two_image', array(
+					'label'   => 'Card Two Image',
+					'section' => 'box5',
+					'settings'   => 'box_five_cards_two_image',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_five_cards_two_title', array(
+					'type'    => 'text',
+					'section' => 'box5',
+					'settings' => 'box_five_cards_two_title',
+					'label'   => esc_html__( 'Card Two Title', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_five_cards_two_text', array(
+					'type'    => 'textarea',
+					'section' => 'box5',
+					'settings' => 'box_five_cards_two_text',
+					'label'   => esc_html__( 'Card Two Text', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_five_cards_three_image', array(
+					'label'   => 'Card Three Image',
+					'section' => 'box5',
+					'settings'   => 'box_five_cards_three_image',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_five_cards_three_title', array(
+					'type'    => 'text',
+					'section' => 'box5',
+					'settings' => 'box_five_cards_three_title',
+					'label'   => esc_html__( 'Card Three Title', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_five_cards_three_text', array(
+					'type'    => 'textarea',
+					'section' => 'box5',
+					'settings' => 'box_five_cards_three_text',
+					'label'   => esc_html__( 'Card One Text', self::textdomain ),
+
+				))
+				);
+				/* END BOX FIVE */
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_six_quote', array(
+					'type'    => 'textarea',
+					'section' => 'box6',
+					'settings' => 'box_six_quote',
+					'label'   => esc_html__( 'Quote/Testimonial', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_six_attribution', array(
+					'type'    => 'text',
+					'section' => 'box6',
+					'settings' => 'box_six_attribution',
+					'label'   => esc_html__( 'Attribution/Author (Name, title, etc)', self::textdomain ),
+
+				))
+				);
+
+				/* END BOX SIX */
+
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_title', array(
+					'type'    => 'text',
+					'section' => 'box7',
+					'settings' => 'box_seven_title',
+					'label'   => esc_html__( 'Box Seven Title', self::textdomain ),
+
+				))
+				);
+
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_seven_logo_one', array(
+					'label'   => 'Logo One',
+					'section' => 'box7',
+					'settings'   => 'box_seven_logo_one',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_seven_logo_two', array(
+					'label'   => 'Logo Two',
+					'section' => 'box7',
+					'settings'   => 'box_seven_logo_two',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_seven_logo_three', array(
+					'label'   => 'Logo Three',
+					'section' => 'box7',
+					'settings'   => 'box_seven_logo_three',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_seven_logo_four', array(
+					'label'   => 'Logo Four',
+					'section' => 'box7',
+					'settings'   => 'box_seven_logo_four',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_seven_logo_five', array(
+					'label'   => 'Logo Five',
+					'section' => 'box7',
+					'settings'   => 'box_seven_logo_five',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_seven_quote_one_headshot', array(
+					'label'   => 'Quote One Headshot',
+					'section' => 'box7',
+					'settings'   => 'box_seven_quote_one_headshot',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_one_name', array(
+					'type'    => 'text',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_one_name',
+					'label'   => esc_html__( 'Quote One Name', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_one_jobtitle', array(
+					'type'    => 'text',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_one_jobtitle',
+					'label'   => esc_html__( 'Quote One Job Title', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_one_quote', array(
+					'type'    => 'textarea',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_one_quote',
+					'label'   => esc_html__( 'Quote One Full Quote', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_seven_quote_two_headshot', array(
+					'label'   => 'Quote Two Headshot',
+					'section' => 'box7',
+					'settings'   => 'box_seven_quote_two_headshot',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_two_name', array(
+					'type'    => 'text',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_two_name',
+					'label'   => esc_html__( 'Quote Two Name', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_two_jobtitle', array(
+					'type'    => 'text',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_two_jobtitle',
+					'label'   => esc_html__( 'Quote Two Job Title', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_two_quote', array(
+					'type'    => 'textarea',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_two_quote',
+					'label'   => esc_html__( 'Quote Two Full Quote', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_seven_quote_three_headshot', array(
+					'label'   => 'Quote Three Headshot',
+					'section' => 'box7',
+					'settings'   => 'box_seven_quote_three_headshot',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_three_name', array(
+					'type'    => 'text',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_three_name',
+					'label'   => esc_html__( 'Quote Three Name', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_three_jobtitle', array(
+					'type'    => 'text',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_three_jobtitle',
+					'label'   => esc_html__( 'Quote Three Job Title', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_three_quote', array(
+					'type'    => 'textarea',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_three_quote',
+					'label'   => esc_html__( 'Quote Three Full Quote', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'box_seven_quote_four_headshot', array(
+					'label'   => 'Quote Four Headshot',
+					'section' => 'box7',
+					'settings'   => 'box_seven_quote_four_headshot',
+				) ) );
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_four_name', array(
+					'type'    => 'text',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_four_name',
+					'label'   => esc_html__( 'Quote Four Name', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_four_jobtitle', array(
+					'type'    => 'text',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_four_jobtitle',
+					'label'   => esc_html__( 'Quote Four Job Title', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_seven_quote_four_quote', array(
+					'type'    => 'textarea',
+					'section' => 'box7',
+					'settings' => 'box_seven_quote_four_quote',
+					'label'   => esc_html__( 'Quote Four Full Quote', self::textdomain ),
+
+				))
+				);
+				/* END BOX SEVEN */
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_eight_title', array(
+					'type'    => 'text',
+					'section' => 'box8',
+					'settings' => 'box_eight_title',
+					'label'   => esc_html__( 'Box Eight Title', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_eight_buttontext', array(
+					'type'    => 'text',
+					'section' => 'box8',
+					'settings' => 'box_eight_buttontext',
+					'label'   => esc_html__( 'Box Eight Button Text', self::textdomain ),
+
+				))
+				);
+				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'box_eight_buttonurl', array(
+					'type'    => 'text',
+					'section' => 'box8',
+					'settings' => 'box_eight_buttonurl',
+					'label'   => esc_html__( 'Box Eight Button URL', self::textdomain ),
+
+				))
+				);
+
+
 
 
 			/* END HOME PAGE MODULES SECTION */
 
-
-			/* HOME PAGE FEATURED CARDS */
-
-			$wp_customize->add_panel( 'featurecards', array(
-				'title'			=>		'Featured Items Cards',
-				'priority' 		=>		30,
-				'description'	=>		__('Four Image Cards linking Featured Collections of your services.', self::textdomain ),
-
-			));
-			
-
-				/* sections */
-			
-				$wp_customize->add_section( 'featurecards_one', array(
-					'title'          => 'Card One',
-					'priority'       => 30,
-					'panel'			 => 'featurecards'
-				) );
-				$wp_customize->add_section( 'featurecards_two', array(
-					'title'          => 'Card Two',
-					'priority'       => 30,
-					'panel'			 => 'featurecards'
-				) );
-				$wp_customize->add_section( 'featurecards_three', array(
-					'title'          => 'Card Three',
-					'priority'       => 30,
-					'panel'			 => 'featurecards'
-				) );
-				$wp_customize->add_section( 'featurecards_three', array(
-					'title'          => 'Card Four',
-					'priority'       => 30,
-					'panel'			 => 'featurecards'
-				) );
-
-				/* settings */
-
-			
-				$wp_customize->add_setting( 'first_featurecard', array(
-					'default'        => '',
-				) );
-
-				$wp_customize->add_setting( 'second_featurecard', array(
-					'default'        => '',
-				) );
-				
-				$wp_customize->add_setting( 'third_featurecard', array(
-					'default'        => '',
-				) );
-
-				$wp_customize->add_setting( 'fourth_featurecard', array(
-					'default'        => '',
-				) );
-
-				$wp_customize->add_setting( 'first_featurecard_title', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-
-				$wp_customize->add_setting( 'second_featurecard_title', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				
-				$wp_customize->add_setting( 'third_featurecard_title', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'fourth_featurecard_title', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				
-				
-				$wp_customize->add_setting( 'first_featurecard_url', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-
-				$wp_customize->add_setting( 'second_featurecard_url', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				
-				$wp_customize->add_setting( 'third_featurecard_url', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'fourthfeaturecard_url', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'first_featurecard_buttontext', array(
-					'default'        => 'Learn More',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-
-				$wp_customize->add_setting( 'second_featurecard_buttontext', array(
-					'default'        => 'Learn More',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				
-				$wp_customize->add_setting( 'third_featurecard_buttontext', array(
-					'default'        => 'Learn More',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				
-				$wp_customize->add_setting( 'first_featurecard_description', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-
-				$wp_customize->add_setting( 'second_featurecard_description', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				
-				$wp_customize->add_setting( 'third_featurecard_description', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-				$wp_customize->add_setting( 'fourth_featurecard_description', array(
-					'default'        => '',
-					'sanitize_callback' => 'sanitize_text_field',
-				) );
-
-
-				/* controls */	
-
-				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'first_featurecard', array(
-					'label'   => 'Card Image',
-					'section' => 'featurecards_one',
-					'settings'   => 'first_featurecard',
-				) ) );
-				
-				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'second_featurecard', array(
-					'label'   => 'Card Image',
-					'section' => 'featurecards_two',
-					'settings'   => 'second_featurecard',
-				) ) );
-				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'third_featurecard', array(
-					'label'   => 'Card Image',
-					'section' => 'featurecards_three',
-					'settings'   => 'third_featurecard',
-				) ) );
-				$wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'fourth_featurecard', array(
-					'label'   => 'Card Image',
-					'section' => 'featurecards_four',
-					'settings'   => 'fourth_featurecard',
-				) ) );
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'first_featurecard_title', array(
-					'type'    => 'text',
-					'section' => 'featurecards_one',
-					'label'   => esc_html__( 'Card Title', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'second_featurecard_title', array(
-					'type'    => 'text',
-					'section' => 'featurecards_two',
-					'label'   => esc_html__( 'Card Title', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'third_featurecard_title', array(
-					'type'    => 'text',
-					'section' => 'featurecards_three',
-					'label'   => esc_html__( 'Card Title', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'fourth_featurecard_title', array(
-					'type'    => 'text',
-					'section' => 'featurecards_four',
-					'label'   => esc_html__( 'Card Title', self::textdomain ),
-
-				))
-				);
-
-
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'first_featurecard_description', array(
-					'type'    => 'textarea',
-					'section' => 'featurecards_one',
-					'label'   => esc_html__( 'Description', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'second_featurecard_description', array(
-					'type'    => 'textarea',
-					'section' => 'featurecards_two',
-					'label'   => esc_html__( 'Description', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'third_featurecard_description', array(
-					'type'    => 'textarea',
-					'section' => 'featurecards_three',
-					'label'   => esc_html__( 'Description', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'fourth_featurecard_description', array(
-					'type'    => 'textarea',
-					'section' => 'featurecards_four',
-					'label'   => esc_html__( 'Description', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'first_featurecard_buttontext', array(
-					'type'    => 'text',
-					'section' => 'featurecards_one',
-					'label'   => esc_html__( 'Button Text', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'second_featurecard_buttontext', array(
-					'type'    => 'text',
-					'section' => 'featurecards_two',
-					'label'   => esc_html__( 'Button Text', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'third_featurecard_buttontext', array(
-					'type'    => 'text',
-					'section' => 'featurecards_three',
-					'label'   => esc_html__( 'Button Text', self::textdomain ),
-
-				))
-				);
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'fourth_featurecard_buttontext', array(
-					'type'    => 'text',
-					'section' => 'featurecards_four',
-					'label'   => esc_html__( 'Button Text', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'first_featurecard_url', array(
-					'type'    => 'text',
-					'section' => 'featurecards_one',
-					'label'   => esc_html__( 'Button URL', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'second_featurecard_url', array(
-					'type'    => 'text',
-					'section' => 'featurecards_two',
-					'label'   => esc_html__( 'Button URL', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'third_featurecard_url', array(
-					'type'    => 'text',
-					'section' => 'featurecards_three',
-					'label'   => esc_html__( 'Button URL', self::textdomain ),
-
-				))
-				);
-
-				$wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'fourth_featurecard_url', array(
-					'type'    => 'text',
-					'section' => 'featurecards_four',
-					'label'   => esc_html__( 'Button URL', self::textdomain ),
-
-				))
-				);
-
-			/* END HOME PAGE FEATURED CARDS */
-
-			
 			// Add "display_title_and_tagline" setting for displaying the site-title & tagline.
 			$wp_customize->add_setting(
 				'display_title_and_tagline',

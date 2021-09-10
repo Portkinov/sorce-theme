@@ -1,16 +1,16 @@
 <?php
-namespace friendlyrobot\admin;
+namespace sorce\admin;
 use \Carbon_Fields\Container as Container;
 use \Carbon_Fields\Field as Field;
-use \friendlyrobot\core\mvc\Control as Control;
+use \sorce\core\mvc\Control as Control;
 
 require_once( get_template_directory() .  '/core/mvc/control/modules.php');
 require_once( get_template_directory() .  '/core/mvc/control/components.php');
 
-use \friendlyrobot\core\mvc\control\Modules as Modules;
-use \friendlyrobot\core\mvc\control\Components as Components;
+use \sorce\core\mvc\control\Modules as Modules;
+use \sorce\core\mvc\control\Components as Components;
 
-use \friendlyrobot\Theme as Theme;
+use \sorce\Theme as Theme;
 
 /**
  * Add Carbon Fields
@@ -35,8 +35,8 @@ class AddFields extends Theme  {
     public static function theme_add_fields() {
         if( class_exists('\Carbon_Fields\Container')){
 
-            \add_action('carbon_fields_register_fields', array(get_class(), 'crb_add_term_meta' ) );
-           # \add_action('carbon_fields_register_fields', array(get_class(), 'crb_services_page' ) );
+            \add_action('carbon_fields_register_fields', array(get_class(), 'crb_home_page' ) );
+            \add_action('carbon_fields_register_fields', array(get_class(), 'crb_coach_upload_page' ) );
 
         }
     }
@@ -68,43 +68,29 @@ class AddFields extends Theme  {
             ) );
             */
     }
-    public static function crb_services_page(){
+    public static function crb_coach_upload_page(){
        #example function showing both Container:: fields for Model and Modules:: for View
         $services_templates = array();
 
-        Container::make('post_meta', 'Mission Statement')
-            ->show_on_page('services')
+        Container::make('post_meta', 'Coach Upload Form')
+            ->show_on_page('coach-upload-form')
             ->add_fields( array(
-                Field::make( 'image', 'services_mssn_img', 'Mission Statement Image' ),
-                Field::make('textarea', 'services_mssn_text', 'Mission Statement Text')
-                    ->set_rows( 2 )
-                #       ->set_attribute( 'maxLength', 250 )
-                    ->set_help_text('(Mission Statement in 250 characters or less)')
+                Field::make( 'image', 'coach_upload_logo', 'Logo' ),
+                Field::make('text', 'coach_upload_shortcode', 'Shortcode')
+                    ->set_help_text('(Shortcode for the upload form)')
         ));
 
-        Modules::make('services', 'Mission Statement', 
+        Modules::make('coach-upload-form', 'Coach Upload Form', 
             array(
-                Components::add_fields('image', 'services_mssn_img'),
-                Components::add_fields('textarea', 'services_mssn_text')
-        ));
-        Container::make('post_meta', 'Video One')
-            ->show_on_page('services')
-            ->add_fields( array(   
-                Field::make('textarea', 'services_one_videoembed', 'Video Embed Code')
-                    ->set_rows( 2 )                 
-                    ->set_help_text('(copy/paste the full embed code here)'),
-                Field::make('text', 'services_one_title', 'Title'),
-                Field::make('textarea', 'services_one_text', 'Text'),
-        ));
-        Modules::make('services', 'Video One',
-            array(
-                Components::add_fields('textarea', 'services_one_videoembed'),
-                Components::add_fields('text', 'services_one_title'),
-                Components::add_fields('textarea', 'services_one_text')
-        ));
+                Components::add_fields('image', 'coach_upload_logo'),
+                Components::add_fields('text', 'coach_upload_shortcode')
+            ), 
+            #make new view file - for pages this is true
+            true
+        );
         
     }
 
 };
 
-\friendlyrobot\admin\AddFields::run();
+\sorce\admin\AddFields::run();

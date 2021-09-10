@@ -1,11 +1,11 @@
 <?php
 /**
  * Template part for displaying page content in page.php
- * @package southportcapital
+ * @package sorce
  */
-use friendlyrobot\Theme as Theme;
-use friendlyrobot\core\mvc\Model as Model;
-use friendlyrobot\core\mvc\View as View;
+use sorce\Theme as Theme;
+use sorce\core\mvc\Model as Model;
+use sorce\core\mvc\View as View;
 
 get_header(); 
 

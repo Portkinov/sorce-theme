@@ -3,9 +3,9 @@
  * Header Template.
  *
  * <head> section until main.
- * @package friendlyrobot
+ * @package sorce
  */
-use friendlyrobot\Theme as Theme;
+use sorce\Theme as Theme;
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

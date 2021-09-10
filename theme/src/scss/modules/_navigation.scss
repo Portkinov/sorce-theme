@@ -2,20 +2,13 @@
 @import '../typography';
 @import '../colors';
 
-.site.page .siteheader,
-.site.four04 .siteheader,
-.site.post .siteheader {
-	background-color: $dark-blue;
-}
 
 .home .site.page .siteheader {
 	position: relative;
+	background-color: $primary;
 	z-index: 8;
-	background-color: transparent;
-	position: absolute;
-	&.sticky {
-		background-color: rgba(0, 0, 0, .64);
-	}
+	height: 41px;
+
 }
 a.skip-link.screen-reader-text {
 	display: none;

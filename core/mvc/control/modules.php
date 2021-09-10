@@ -1,6 +1,6 @@
 <?php
-namespace friendlyrobot\core\mvc\control;
-use friendlyrobot\Theme as Theme;
+namespace sorce\core\mvc\control;
+use sorce\Theme as Theme;
 
 
 #abstract class Modules {
@@ -9,13 +9,14 @@ use friendlyrobot\Theme as Theme;
         'text', 'textarea', 'conditional', 'bullet', 'image', 'rich_text'
     );
 
-    public static function make($pagename = '', $modulename = '', $fieldarray){
+    public static function make($pagename = '', $modulename = '', $fieldarray, $newview = false){
         $pagefilename = self::filename($pagename);
         $modfilename = self::filename($modulename);
         $modclassname = self::camelCase($modulename);
         $fields = self::checkfields($fieldarray);
         self::register_templates($pagefilename, $fields);
-        self::build_php_component($modclassname, $fields);
+        self::build_php_component($modfilename, $modclassname, $fields);
+        if($newview) self::build_php_view($modfilename, $modclassname, $fields);
         self::build_css_file($modfilename, $fields );
         self::build_css_page($pagefilename);
     }
@@ -28,28 +29,33 @@ use friendlyrobot\Theme as Theme;
         } else {
             $all_options = $fields;
         }
-       # \update_option($optionkey, $alloptions);
-        /*
-        $teams_templates['teams_pl_img'] = 'image';
-        $teams_templates['teams_pl_title'] = 'text';
-        $teams_templates['teams_pl_text'] = 'rich_text';
-        $teams_templates['teams_pl_salutation'] = "text";
-        $teams_templates['teams_pl_signature'] = "text";
-        
+        \update_option($optionkey, $all_options);
 
-        $update = \update_option( 'our-team_template_fields', $teams_templates );
-
-        */
     }
-    private static function build_php_component( $modname, $fields ){
+    private static function build_php_view( $modfilename, $modclassname, $fields ){
         #checks for unique && arguments
-        $code = self::build_php_code($modname, $fields );
+        $code = self::build_php_view_code($modfilename, $modclassname, $fields );
 
         if($code){
-            $new_module_php = fopen( \get_template_directory() . '/template-parts/components/'. $modname .'.php', 'w' );
+
+            $new_module_php = fopen( \get_template_directory() . '/theme/views/'. $modfilename .'.php', 'w' );
             fwrite( $new_module_php, $code );
             fclose($new_module_php);
-            chmod(\get_template_directory() . '/template-parts/components/'. $modname .'.php', 0775);
+            chmod(\get_template_directory() . '/theme/views/'. $modfilename .'.php', 0775);
+            return true;
+        } else {
+            return false;
+        }
+    }
+    private static function build_php_component( $modfilename, $modclassname, $fields ){
+        #checks for unique && arguments
+        $code = self::build_php_code($modfilename, $modclassname, $fields );
+
+        if($code){
+            $new_module_php = fopen( \get_template_directory() . '/template-parts/components/'. $modfilename .'.php', 'w' );
+            fwrite( $new_module_php, $code );
+            fclose($new_module_php);
+            chmod(\get_template_directory() . '/template-parts/components/'. $modfilename .'.php', 0775);
             return true;
         } else {
             return false;
@@ -131,15 +137,45 @@ use friendlyrobot\Theme as Theme;
             }
         }
     }
-
-
-    private static function build_php_code( $modname, $fields ){
+    private static function build_php_view_code( $modfilename, $modclassname, $fields ){
         if(Theme::$mode === 'development'){
-            if(!self::does_module_exist( $modname)){
+            $varname = str_replace('-','_',$modfilename);
+            if(!self::does_view_exist( $modfilename)){
+                $markup = '<?php ' . PHP_EOL;
+                $markup.= 'require_once \get_template_directory().\'/template-parts/components/'.$modfilename.'.php\';  ';
+                $markup.= ''. PHP_EOL;
+                $markup.= ''. PHP_EOL;
+                $markup.= 'use \\'.Theme::textdomain .'\core\TemplateHelpers as TemplateHelpers;';
+                $markup.= ''. PHP_EOL;
+                $markup.= 'use \\'.Theme::textdomain .'\components\\'.$modclassname.' as '.$modclassname.';';
+                $markup.= ''. PHP_EOL;
+                $markup.= ''. PHP_EOL;
+                $markup.= '$'. $varname . ' = new ' . $modclassname . '(';
+                $markup.= ''. PHP_EOL;
+                foreach($fields as $name => $type){
+                    $markup.='        $this->'.$name.', '. PHP_EOL;
+                }
+                $markup.= ');'. PHP_EOL;
+                $markup.= '$'.$varname . '->render();' . PHP_EOL;
+                $markup.= ''. PHP_EOL;
+                $markup.= ''. PHP_EOL;
+
+                $markup.= "TemplateHelpers::Spacer('padding-top:10vw;');" . PHP_EOL;
+                $markup.= ''. PHP_EOL;
+                return $markup;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    private static function build_php_code( $modfilename, $modclassname, $fields ){
+        if(Theme::$mode === 'development'){
+            if(!self::does_module_exist( $modfilename)){
                 $markup = '<?php ' . PHP_EOL;
                 $markup.= 'namespace ' . Theme::textdomain . '\\components;'. PHP_EOL;
                 $markup.= ''. PHP_EOL;
-                $markup.= 'class ' . $modname . '{ '. PHP_EOL;
+                $markup.= 'class ' . $modclassname . '{ '. PHP_EOL;
                 $markup.= ''. PHP_EOL;
                 $markup.= '    public $html; '. PHP_EOL;
                 $markup.= ''. PHP_EOL;
@@ -171,13 +207,13 @@ use friendlyrobot\Theme as Theme;
                 $markup = rtrim($markup,',');
                 $markup.= '){ '. PHP_EOL;
                 $markup.= '        #add your gatekeeping logic here '. PHP_EOL;
-                $markup.= '        $markup =\'<div class="containerwrap '.strtolower($modname).'">\';'. PHP_EOL;
+                $markup.= '        $markup =\'<div class="containerwrap '.strtolower($modclassname).'">\';'. PHP_EOL;
                 $markup.= '        $markup.=\'<div class="container-fluid component p-0 m-0">\';'. PHP_EOL;
                 $markup.= ''. PHP_EOL;
                 $markup.= ''. PHP_EOL;
                 $markup.= ''. PHP_EOL;
                 $markup.= ''. PHP_EOL;
-                $markup.= '        $markup =\'</div></div>\'; '. PHP_EOL;
+                $markup.= '        $markup .=\'</div></div>\'; '. PHP_EOL;
                 $markup.= '        return $markup; '. PHP_EOL;
                 $markup.= '    }'. PHP_EOL;
                 $markup.= '    public function render(){ echo $this->html; }'. PHP_EOL;
@@ -240,7 +276,10 @@ use friendlyrobot\Theme as Theme;
         return file_exists( \get_template_directory() . '/theme/src/scss/pages/_'.$module_name.'.scss');
     }
     private static function does_module_exist( $module_name ){
-        return file_exists( \get_template_directory() . '/theme/template-parts/components/'.$module_name.'.php');
+        return file_exists( \get_template_directory() . '/template-parts/components/'.$module_name.'.php');
+    }
+    private static function does_view_exist( $module_name ){
+        return file_exists( \get_template_directory() . '/theme/views/'.$module_name.'.php');
     }
 
 }

@@ -4,11 +4,12 @@
 }
 
 @import 'pages/home';
+@import 'pages/coach-upload-form';
 
 /* page header responsive */
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
-	.friendly-robot-page .page-header {
+	.sorce .page-header {
 	}
 }

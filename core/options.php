@@ -1,13 +1,13 @@
 <?php
-namespace friendlyrobot\options;
-use friendlyrobot\Theme as Theme;
+namespace sorce\options;
+use sorce\Theme as Theme;
 use \Carbon_Fields\Container;
 use \Carbon_Fields\Field;
 
 /**
  * Customizer settings for this theme.
  *
- * @package nakeytheme
+ * @package sorce
  * 
  * https://wordpress.stackexchange.com/questions/71404/creating-a-rotating-header-image-slider-using-theme-customization 
  * 
@@ -16,9 +16,9 @@ use \Carbon_Fields\Field;
 
  */
 
-if ( ! class_exists( '\friendlyrobot\options\Robot_Options' ) ) {
+if ( ! class_exists( '\sorce\options\Sorce_Options' ) ) {
     
-	class Robot_Options extends Theme {
+	class Sorce_Options extends Theme {
         private static $instance = null;
         private $options;
         public static function get_instance(){
@@ -30,7 +30,8 @@ if ( ! class_exists( '\friendlyrobot\options\Robot_Options' ) ) {
         
       /* CONTRUCTOR */
 		public function __construct() {
-            \add_action( 'carbon_fields_register_fields', array( get_class(), 'add_options_page' ) );
+           # No theme options for this theme
+           # \add_action( 'carbon_fields_register_fields', array( get_class(), 'add_options_page' ) );
         }
         
         public static function add_options_page() {
@@ -63,5 +64,5 @@ if ( ! class_exists( '\friendlyrobot\options\Robot_Options' ) ) {
             
         }
 	}
-    \friendlyrobot\options\Robot_Options::get_instance();
+    \sorce\options\Sorce_Options::get_instance();
 }

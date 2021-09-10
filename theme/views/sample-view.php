@@ -2,9 +2,9 @@
 require_once \get_template_directory().'/template-parts/components/box-mission.php';  
 require_once \get_template_directory().'/template-parts/components/rich-text-right.php';
 
-use \southportcapital\classes\TemplateHelpers as TemplateHelpers;
-use \southportcapital\components\BoxMission as BoxMission;
-use \southportcapital\components\RichTextRight as RichTextRight;
+use \sorce\core\TemplateHelpers as TemplateHelpers;
+use \sorce\components\BoxMission as BoxMission;
+use \sorce\components\RichTextRight as RichTextRight;
  
 $mission_statement = new BoxMission( 
     $this->services_mssn_img, 

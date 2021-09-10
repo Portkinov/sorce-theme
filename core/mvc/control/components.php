@@ -1,7 +1,7 @@
 <?php
-namespace friendlyrobot\core\mvc\control;
+namespace sorce\core\mvc\control;
 
-use \friendlyrobot\core\mvc\control\Modules as Modules;
+use \sorce\core\mvc\control\Modules as Modules;
 
 class Components extends Modules {
 

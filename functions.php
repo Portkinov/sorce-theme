@@ -1,19 +1,19 @@
 <?php
-namespace friendlyrobot; #should be same as textdomain
+namespace sorce; #should be same as textdomain
 use \Carbon_Fields\Container as Container;
 use \Carbon_Fields\Field as Field;
 //Config
-@ini_set( 'upload_max_size' , '24M' );
-@ini_set( 'post_max_size', '24M');
-@ini_set( 'max_execution_time', '300' );
+#@ini_set( 'upload_max_size' , '24M' );
+#@ini_set( 'post_max_size', '24M');
+#@ini_set( 'max_execution_time', '300' );
 /* 
- * The Friendly Robot Base Class
+ * Sorce Theme Base Class
  *
- * @package         thefriendlyrobot
+ * @package         sorce
  * @author          Ben Toth
  * @license         Commercial
  * @link            https://ben-toth.com
- * @copyright       2021 FriendlyRobot
+ * @copyright       2021 Sorce
  *
  * @wordpress-theme Functions File
  * @BitBucketLink:  Add BitBucket address here
@@ -27,12 +27,12 @@ use \Carbon_Fields\Field as Field;
 
 defined( 'ABSPATH' ) OR exit;
 
-if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
+if ( ! class_exists( '\sorce\Theme' ) ) {
     /**
     * Theme instantiated using the singleton pattern
     */
    
-    \add_action( 'after_setup_theme', array ( '\friendlyrobot\Theme', 'get_instance' ), 1 );
+    \add_action( 'after_setup_theme', array ( '\sorce\Theme', 'get_instance' ), 1 );
     
     class Theme {
  
@@ -41,8 +41,8 @@ if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
         // Theme Settings Generic
         const version = '1.0.0';
         static $mode = 'development'; //accepts "development" and "production" arguments
-        const textdomain = 'friendlyrobot'; // name of the theme ##
-        const nicename = 'Friendly Robot'; // Nice Name with caps & spaces for menus etc.
+        const textdomain = 'sorce'; // name of the theme ##
+        const nicename = 'Sorce'; // Nice Name with caps & spaces for menus etc.
         static $logo_dimensions = array('width'=> 200, 'height' => 34 );
         //Instance
         public static function get_instance() 
@@ -78,11 +78,12 @@ if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
             #\add_action( 'init', array(get_class(), 'add_theme_taxonomies') );
             
             //add endpoints to the theme REST API
-            \add_action( 'after_setup_theme', array(get_class(), 'add_theme_endpoints'));
+           # \add_action( 'after_setup_theme', array(get_class(), 'add_theme_endpoints'));
 
             //add vendors & dependencies
             require_once get_template_directory() . '/admin/add_fields.php';
             #require_once( 'vendor/autoload.php' );
+            require_once get_template_directory() . '/admin/form_integration.php';
 
             \add_filter( 'show_admin_bar', '__return_false' );
 
@@ -99,7 +100,7 @@ if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
             \add_action( 'rest_api_init', function () {
                 register_rest_route( self::textdomain.'/v1', '/themeversion/', array(
                   'methods' => 'GET',
-                  'callback' => array('\friendlyrobot\Theme', 'return_version'),
+                  'callback' => array('\sorce\Theme', 'return_version'),
                   'args' => array(
                     ),
                   ),
@@ -184,6 +185,7 @@ if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
         public static function add_theme_pages(){
             //add pages
             $frontpage = self::add_theme_page('front-page', ucfirst(self::textdomain) . ' home');
+            $coachform = self::add_theme_page('coach-upload', 'Coach Upload Form' );
 
             //assign static home page to homepage
             if($frontpage) self::assign_home_page($frontpage);
@@ -199,18 +201,35 @@ if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
         public static function add_theme_menus(){
             //register theme menu locations
             \register_nav_menu(self::textdomain . '_main_nav',__( ucfirst(self::textdomain) . ' Theme Main Menu', self::textdomain ));
-            \register_nav_menu(self::textdomain . '_footer_nav',__( 'Footer Menu', self::textdomain ));
+            \register_nav_menu(self::textdomain . '_footer_left_nav',__( 'Footer Menu Left', self::textdomain ));
+            \register_nav_menu(self::textdomain . '_footer_right_nav',__( 'Footer Menu Right', self::textdomain ));
 
             //register our Bootstrap Navwalker walker class
             require_once get_template_directory() . '/core/wp-bootstrap-navwalker.php';
 
             $menus = array(
                 ucfirst(self::textdomain) . ' Main Menu' => self::textdomain . '_main',
-                ucfirst(self::textdomain) . ' Footer Main Menu' => self::textdomain . '_footer'
+                ucfirst(self::textdomain) . ' Footer Menu Left' => self::textdomain . '_footer_left',
+                ucfirst(self::textdomain) . ' Footer Menu Right' => self::textdomain . '_footer_right',
             );
-            $locations = \get_theme_mod('nav_menu_locations');
+            # \set_theme_mod( 'nav_menu_locations', $locations ); 
+            $theme_navs = \get_theme_mod( 'nav_menu_locations' );
+           foreach($menus as $menu => $slug ){
+
+                $menu_exists = \wp_get_nav_menu_object( $slug );
+                if( !$menu_exists && !is_wp_error($menu_exists) ){
+                    $menu_id = \wp_create_nav_menu($slug);
+                    
+                } else { $menu_id = $menu_exists->term_id; }
+                if(!array_key_exists( $slug .'_nav', $theme_navs) ){
+                    $theme_navs[$slug .'_nav'] = $menu_id;
+                } 
+
+           }
+           \set_theme_mod('nav_menu_locations', $theme_navs);
+
                       
-            \set_theme_mod( 'nav_menu_locations', $locations ); 
+
             //add a filter to 
             \add_filter('nav_menu_css_class', array(get_class(), 'theme_add_li_class'), 10, 4);
         }
@@ -229,23 +248,6 @@ if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
             \add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
             \add_theme_support( 'wp-block-styles' );
 
-            \add_theme_support( 'woocommerce', array(
-                'thumbnail_image_width' => 150,
-                'single_image_width'    => 300,
-        
-                'product_grid'          => array(
-                    'default_rows'    => 3,
-                    'min_rows'        => 2,
-                    'max_rows'        => 8,
-                    'default_columns' => 4,
-                    'min_columns'     => 2,
-                    'max_columns'     => 5,
-                ),
-            ) );
-            \add_theme_support( 'wc-product-gallery-zoom' );
-            \add_theme_support( 'wc-product-gallery-lightbox' );
-            \add_theme_support( 'wc-product-gallery-slider' );
-
         }
         
         private static function load_classes() {
@@ -254,8 +256,8 @@ if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
             require_once \get_template_directory().'/core/customizer.php';   
             require_once \get_template_directory().'/core/options.php';  
 
-            #Load sub widget classes
-            #require_once \get_template_directory(). '/classes/test_widget.php';
+            #Load utility classes
+            require_once \get_template_directory(). '/core/template-helpers.php';
 
 
             #Load Footer widget area and insert sub widgets
@@ -279,11 +281,12 @@ if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
         }
         public static function theme_enqueue(){
             #set bootstrap version if bootstrap
-            $bs_version = '4.5.2';
+            $bs_version = '5.1.0';
             $is_bootstrap = \carbon_get_theme_option('is_bootstrap');
             
             $theme_js_deps = array('runtime');
-            $theme_css_deps = array('bootstrap-css');
+           # $theme_css_deps = array('bootstrap-css');
+           $theme_css_deps = array();
     
             if($is_bootstrap == 'yes') {
                 
@@ -320,10 +323,10 @@ if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
                         'all'
                     );  
                 }
-                array_push($theme_js_deps, "jquery", "popper", "bootstrap-js");
-                array_push($theme_css_deps, "bootstrap-css");
+                array_push($theme_js_deps, "bootstrap-js");
+               # array_push($theme_css_deps, "bootstrap-css");
                 
-                
+                /*
                 \wp_enqueue_script(
                     'popper',
                     'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js',
@@ -331,10 +334,11 @@ if ( ! class_exists( '\friendlyrobot\Theme' ) ) {
                     '1.12.9',
                     false
                 );
+                */
                 \wp_enqueue_script(
                     'bootstrap-js', 
                     'https://stackpath.bootstrapcdn.com/bootstrap/'.$bs_version.'/js/bootstrap.min.js',
-                    array('popper', 'jquery'),
+                    array(),
                     $bs_version,
                     false
                 );

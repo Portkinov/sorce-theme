@@ -1,0 +1,88 @@
+#page-coach-upload-form {
+	padding-left: 10.97vw;
+	padding-right: 10.97vw;
+	.containerwrap.coachuploadform {
+		display: flex;
+		flex-direction: column;
+		background: linear-gradient(116.94deg, rgba(255, 255, 255, 0.15) 24.36%, rgba(255, 255, 255, 0) 90.39%);
+		//backdrop-filter: blur(100px);
+		/* Note: backdrop-filter has minimal browser support */
+		padding: 10%;
+		border-radius: 20px;
+		-webkit-backface-visibility: hidden;
+		.filetype {
+			display: none;
+			&.active {
+				display: flex;
+			}
+		}
+		.row {
+			display: flex;
+			flex-direction: row;
+		}
+		/* INPUTS */
+		.wpcf7-form {
+			input,
+			textarea {
+				border-radius: 20px;
+			}
+			textarea {
+				padding: 1%;
+			}
+			.wpcf7-form-control-wrap.audio input[type="file"],
+			.wpcf7-form-control-wrap.video input[type="file"] {
+				border-radius: 0;
+				padding: 0 1%;
+			}
+			input[type="button"],
+			input[type="button"]::-webkit-file-upload-button,
+			input[type="file" i]::-webkit-file-upload-button,
+			input[type="button"]::file-selector-button {
+				background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #bbd4ff;
+				border-radius: 22.5px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				border: 2px solid #bbd4ff;
+			}
+			.wpcf7-submit,
+			.custom-button-blue {
+				background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #bbd4ff;
+				border-radius: 22.5px;
+				width: calc(11.66vw - 4px);
+				min-width: 164px;
+				height: calc(2.69vw - 4px);
+				min-height: 35px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				border: none;
+				&:after {
+					content: '';
+					display: flex;
+					position: absolute;
+					top: -4px;
+					left: -4px;
+					width: 11.66vw;
+					min-width: 168px;
+					height: 2.69vw;
+					min-height: 39px;
+					border-radius: 22.5px;
+					border: 2px solid #bbd4ff;
+				}
+			}
+			.wpcf7-submit {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	#page-coach-upload-form {
+	}
+}

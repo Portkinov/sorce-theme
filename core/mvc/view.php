@@ -1,9 +1,8 @@
 <?php
-namespace friendlyrobot\core\mvc;
+namespace sorce\core\mvc;
 
 
-//spin it up
-#\nv_dailyvibe\theme\Template::get_instance();
+
 
 class View {
     private $file;
