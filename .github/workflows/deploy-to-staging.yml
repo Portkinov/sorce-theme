@@ -35,9 +35,9 @@ jobs:
           SSH_KEY: ${{ secrets.STAGING_SSH }}
           SSH_HOST: ${{ secrets.STAGING_SSH_IP }}
       
-      - name: Zip plugin
+      - name: Zip theme
         env:
-          THEME_NAME: Sorce  
+          THEME_NAME: sorce-theme 
         run: |
               cd $GITHUB_WORKSPACE/..
               # zip up the source
@@ -45,14 +45,10 @@ jobs:
 
       - name: Copy Files
         env: 
-          THEME_NAME: Sorce
+          THEME_NAME: sorce-theme
           DEPLOY_DIR: ~/deploy-from-github
           THEME_PATH: /home/bitnami/apps/wordpress/htdocs/wp-content/themes
         run: |
               scp -v /var/tmp/$THEME_NAME.zip staging:$DEPLOY_DIR
               ssh staging "cd $DEPLOY_DIR;rm -rf $THEME_NAME.backup;mv $THEME_PATH/$THEME_NAME $THEME_NAME.backup;unzip $THEME_NAME.zip; mv $THEME_NAME $THEME_PATH;"
 
-
-    # BEFORE I WAS JUST DOING IT IN A SERVER SIDE BASH SCRIPT BUT ITS MORE TRANSPARENT HERE FOR BETTER OR WORSE            
-    #  - name: Overwrite plugin
-    #    run: ssh staging 'sudo bash /home/bitnami/apps/wordpress/greenheartorg_deploy.sh; exit'
