@@ -39,5 +39,5 @@ use \sorce\Theme as Theme;
 	*/
 ?>
 
-<a class="logout-link"><span class="logout-button">Sign out</span></a>
+<a class="logout-link" href="<?php echo get_site_url() ?>/wp-login.php?action=logout"><span class="logout-button">Sign out</span></a>
 </div>
