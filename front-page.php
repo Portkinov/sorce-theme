@@ -1,12 +1,5 @@
 <?php
 
-require_once \get_template_directory().'/template-parts/components/featured-cards.php';  
-
-
-
-use sorce\components\HomeFeaturedCards as HomeFeaturedCards;
-
-
 /**
  * The home page
  * trying with code
