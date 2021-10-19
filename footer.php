@@ -1,9 +1,6 @@
  <?php
  use sorce\Theme as Theme;
  ?>   
-        
-
-    
 
     <footer class="theme-footer mx-0 px-0 container-fluid">
 

@@ -4,14 +4,7 @@ use sorce\Theme as Theme;
 /* 
 
     Contact Forms 7 Integration Middleware class
-
-    - Dynamic select categories
-     *
-     * @usage [select name taxonomy:{$taxonomy} ...]
-     * 
-     * @param Array $tag
-     * 
-     * @return Array $tag
+    Marked for Deprecation
  */
 
 
@@ -20,13 +13,13 @@ class Forms extends Theme  {
     public static function run(){
 
         #check for an audio or video upload before any submissions - this inserts other filters
-        \add_action('wpcf7_acceptance', array(get_class(), 'pre_audio_video_check'));
+       # \add_action('wpcf7_acceptance', array(get_class(), 'pre_audio_video_check'));
        
         #dynamically populate categories
-        \add_filter( 'wpcf7_contact_form_properties', array(get_class(), 'dynamic_inject_categories')); 
+      #  \add_filter( 'wpcf7_contact_form_properties', array(get_class(), 'dynamic_inject_categories')); 
         
         #run with nonce - necessary for get user check sto work
-        \add_filter( 'wpcf7_verify_nonce', '__return_true' );
+      #  \add_filter( 'wpcf7_verify_nonce', '__return_true' );
 
     }
 

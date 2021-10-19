@@ -3,7 +3,11 @@
 use \sorce\Theme as Theme;
 
 ?>
-<div class="container-fluid p-0 siteheader">
+
+
+
+
+<header class="container-fluid p-0 siteheader">
 
 	
 	<?php 
@@ -37,7 +41,20 @@ use \sorce\Theme as Theme;
 		'walker'          => new \WP_Bootstrap_Navwalker(),
 	) );
 	*/
+	$user = \wp_get_current_user();
+	if($user){
+		$loginout = '<a class="logout-link" href="'. get_site_url() .'/wp-login.php?action=logout">';
+		$loginout.= '<span class="logout-button">Sign out</span></a></div>';
+	} else {
+		$loginout = '<a class="login-link" href="'. get_site_url() .'/wp-login.php">';
+		$loginout.= '<span class="login-button">Log In</span></a></div>';
+	}
+
 ?>
 
-<a class="logout-link" href="<?php echo get_site_url() ?>/wp-login.php?action=logout"><span class="logout-button">Sign out</span></a>
-</div>
+	<div class="buttongroup signin">
+
+		<div class="button solid">Get a Demo</div>
+		<div class="button two"><?php echo $loginout ?></div>
+	</div>
+</header>
