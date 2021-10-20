@@ -2,13 +2,10 @@
 @import '../typography';
 @import '../colors';
 
-
 .home .site.page .siteheader {
 	position: relative;
-	background-color: $primary;
 	z-index: 8;
 	height: 41px;
-
 }
 a.skip-link.screen-reader-text {
 	display: none;

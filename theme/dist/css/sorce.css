@@ -260,7 +260,6 @@ div.text-light {
 /* with clamps on all sizes we shouldn't need to do much media querying for typography */
 .home .site.page .siteheader {
   position: relative;
-  background-color: #eb0001;
   z-index: 8;
   height: 41px; }
 
