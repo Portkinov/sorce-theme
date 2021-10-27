@@ -58,15 +58,16 @@ class AddFields extends Theme  {
     }
     /* CARBON FIELDS PAGE FUNCTIONS */
     public static function crb_home_page(){
-        /*
-        Container::make( 'post_meta', 'Custom Data' )
+        
+        Container::make( 'post_meta', 'Section One' )
             ->where( 'post_id', '=', get_option( 'page_on_front' ) )
             ->add_fields( array( 
+                Field::make( 'text', 'sec_1_title', 'Title'),
                 Field::make( 'file', 'home_video', 'Home Page Video' )
                 ->set_type( 'video' )
                 ->set_value_type( 'url' ),
             ) );
-            */
+            
     }
     public static function crb_coach_upload_page(){
        #example function showing both Container:: fields for Model and Modules:: for View

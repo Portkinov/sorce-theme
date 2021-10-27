@@ -584,6 +584,16 @@ ul.dropdown-menu.show {
     #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-submit {
       margin-top: 20px; }
 
+#entry-docs {
+  background-color: white; }
+  #entry-docs h1, #entry-docs h2, #entry-docs h3, #entry-docs h4, #entry-docs h5, #entry-docs h6, #entry-docs p, #entry-docs div {
+    color: #444; }
+
+.docs {
+  background-color: white; }
+  .docs h1, .docs h2, .docs h3, .docs h4, .docs h5, .docs h6, .docs p, .docs div {
+    color: #444; }
+
 /* page header responsive */
 /* headlines */
 /* links */
