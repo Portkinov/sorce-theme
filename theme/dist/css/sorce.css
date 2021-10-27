@@ -584,15 +584,18 @@ ul.dropdown-menu.show {
     #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-submit {
       margin-top: 20px; }
 
-#entry-docs {
+.docs-template-default {
   background-color: white; }
-  #entry-docs h1, #entry-docs h2, #entry-docs h3, #entry-docs h4, #entry-docs h5, #entry-docs h6, #entry-docs p, #entry-docs div {
+  .docs-template-default h1, .docs-template-default h2, .docs-template-default h3, .docs-template-default h4, .docs-template-default h5, .docs-template-default h6, .docs-template-default p, .docs-template-default div {
     color: #444; }
-
-.docs {
-  background-color: white; }
-  .docs h1, .docs h2, .docs h3, .docs h4, .docs h5, .docs h6, .docs p, .docs div {
-    color: #444; }
+  .docs-template-default #entry-docs {
+    background-color: white; }
+    .docs-template-default #entry-docs h1, .docs-template-default #entry-docs h2, .docs-template-default #entry-docs h3, .docs-template-default #entry-docs h4, .docs-template-default #entry-docs h5, .docs-template-default #entry-docs h6, .docs-template-default #entry-docs p, .docs-template-default #entry-docs div {
+      color: #444; }
+  .docs-template-default .docs {
+    background-color: white; }
+    .docs-template-default .docs h1, .docs-template-default .docs h2, .docs-template-default .docs h3, .docs-template-default .docs h4, .docs-template-default .docs h5, .docs-template-default .docs h6, .docs-template-default .docs p, .docs-template-default .docs div {
+      color: #444; }
 
 /* page header responsive */
 /* headlines */
