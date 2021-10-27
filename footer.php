@@ -48,20 +48,27 @@
                 <div class="bottom social-menu">
                     <?php
                         /* get social menu */
-                        $fblink = \carbon_get_theme_option('crb_facebook_link');
-                        $fblogo = \carbon_get_theme_option('crb_facebook_logo') ? \carbon_get_theme_option('crb_facebook_logo') : get_template_directory_uri().'/theme/assets/social-fb.svg';
 
-                        $twlink = \carbon_get_theme_option('crb_twitter_link');
-                        $twlogo = \carbon_get_theme_option('crb_twitter_logo') ? \carbon_get_theme_option('crb_twitter_logo') : get_template_directory_uri().'/theme/assets/social-ig.svg';
+                       # $fblink = \carbon_get_theme_option('crb_facebook_link');
+                        $fblink = "#";
+                        $fblogo = \carbon_get_theme_option('crb_facebook_logo') ? \carbon_get_theme_option('crb_facebook_logo') : get_template_directory_uri().'/theme/dist/css/img/facebook.svg';
+                       
 
-                        $iglink = \carbon_get_theme_option('crb_instagram_link');
-                        $iglogo = \carbon_get_theme_option('crb_instagram_logo') ? \carbon_get_theme_option('crb_instagram_logo') : get_template_directory_uri().'/theme/assets/social-tw.svg';
+                       # $twlink = \carbon_get_theme_option('crb_twitter_link');
+                        $twlink = "#";
+                        $twlogo = \carbon_get_theme_option('crb_twitter_logo') ? \carbon_get_theme_option('crb_twitter_logo') : get_template_directory_uri().'/theme/dist/css/img/twitter.svg';
+                
+
+                        #$iglink = \carbon_get_theme_option('crb_instagram_link');
+                        $iglink = "#";
+                        $iglogo = \carbon_get_theme_option('crb_instagram_logo') ? \carbon_get_theme_option('crb_instagram_logo') : get_template_directory_uri().'/theme/dist/css/img/instagram.svg';
+                       
                         
                         $youtubelink = \carbon_get_theme_option('crb_youtube_link');
-                        $youtubelogo = \carbon_get_theme_option('crb_youtube_logo') ? \carbon_get_theme_option('crb_youtube_logo') : get_template_directory_uri().'/theme/assets/social-yt.svg';
+                     #   $youtubelogo = \carbon_get_theme_option('crb_youtube_logo') ? \carbon_get_theme_option('crb_youtube_logo') : get_template_directory_uri().'/theme/assets/social-yt.svg';
 
                         $linkedinlink = \carbon_get_theme_option('crb_linkedin_link');
-                        $linkeinlogo = \carbon_get_theme_option('crb_linkedin_logo') ? \carbon_get_theme_option('crb_youtube_logo') : get_template_directory_uri().'/theme/assets/social-li.svg';
+                     #   $linkeinlogo = \carbon_get_theme_option('crb_linkedin_logo') ? \carbon_get_theme_option('crb_youtube_logo') : get_template_directory_uri().'/theme/assets/social-li.svg';
 
                         #Render It
                         $footerul = '<ul class="footer-social">';
