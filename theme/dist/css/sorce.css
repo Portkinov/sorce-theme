@@ -585,6 +585,7 @@ ul.dropdown-menu.show {
       margin-top: 20px; }
 
 .docs-template-default {
+  font-size: 1rem;
   background-color: white; }
   .docs-template-default h1, .docs-template-default h2, .docs-template-default h3, .docs-template-default h4, .docs-template-default h5, .docs-template-default h6, .docs-template-default p, .docs-template-default div {
     color: #444; }
