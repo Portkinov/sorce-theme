@@ -1,6 +1,11 @@
 /* globals */
+
+
 /* move these to colors and then create or compile colors */
+
+
 /* move these to colors and then create or compile colors */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
@@ -14,48 +19,56 @@ p,
 span,
 html,
 div {
-  font-family: "Poppins", "Open Sans", sans-serif;
-  color: white; }
+    font-family: "Poppins", "Open Sans", sans-serif;
+    color: white;
+}
 
 h1 {
-  font-weight: 600;
-  font-size: clamp(40px, 3.47vw, 50px);
-  line-height: clamp(40px, 3.47vw, 50px);
-  letter-spacing: 0.2px; }
+    font-weight: 600;
+    font-size: clamp(40px, 3.47vw, 50px);
+    line-height: clamp(40px, 3.47vw, 50px);
+    letter-spacing: 0.2px;
+}
 
 h2 {
-  font-weight: 600;
-  font-size: clamp(32px, 2.78vw, 40px);
-  line-height: clamp(45px, 3.96vw, 57px);
-  letter-spacing: 0.2px; }
+    font-weight: 600;
+    font-size: clamp(32px, 2.78vw, 40px);
+    line-height: clamp(45px, 3.96vw, 57px);
+    letter-spacing: 0.2px;
+}
 
 h4 {
-  font-weight: 400;
-  font-size: clamp(18px, 1.67vw, 24px);
-  line-height: clamp(24px, 2.03vw, 29.26px);
-  letter-spacing: 0.2px; }
+    font-weight: 400;
+    font-size: clamp(18px, 1.67vw, 24px);
+    line-height: clamp(24px, 2.03vw, 29.26px);
+    letter-spacing: 0.2px;
+}
 
 h5 {
-  font-weight: 600;
-  font-size: clamp(16px, 1.39vw, 20px);
-  line-height: clamp(28px, 2.36vw, 34px); }
+    font-weight: 600;
+    font-size: clamp(16px, 1.39vw, 20px);
+    line-height: clamp(28px, 2.36vw, 34px);
+}
 
 .entry-content {
-  font-weight: 500;
-  font-size: clamp(16px, 1.39vw, 20px);
-  line-height: clamp(24px, 2.08vw, 30px);
-  letter-spacing: 0.2px; }
+    font-weight: 500;
+    font-size: clamp(16px, 1.39vw, 20px);
+    line-height: clamp(24px, 2.08vw, 30px);
+    letter-spacing: 0.2px;
+}
 
 .card-text {
-  font-weight: 400;
-  font-size: clamp(12px, 0.97vw, 14px);
-  line-height: clamp(15px, 1.18vw, 17.07px); }
+    font-weight: 400;
+    font-size: clamp(12px, 0.97vw, 14px);
+    line-height: clamp(15px, 1.18vw, 17.07px);
+}
 
 div,
 p {
-  font-size: clamp(14px, 1.11vw, 16px);
-  line-height: clamp(18px, 1.67vw, 24px);
-  letter-spacing: 0.2px; }
+    font-size: clamp(14px, 1.11vw, 16px);
+    line-height: clamp(18px, 1.67vw, 24px);
+    letter-spacing: 0.2px;
+}
 
 h1.text-light,
 h2.text-light,
@@ -65,11 +78,18 @@ h5.text-light,
 h6.text-light,
 p.text-light,
 div.text-light {
-  color: white !important; }
+    color: white !important;
+}
+
 
 /* with clamps on all sizes we shouldn't need to do much media querying for typography */
+
+
 /* sections */
+
+
 /* move these to colors and then create or compile colors */
+
 h1,
 h2,
 h3,
@@ -80,48 +100,56 @@ p,
 span,
 html,
 div {
-  font-family: "Poppins", "Open Sans", sans-serif;
-  color: white; }
+    font-family: "Poppins", "Open Sans", sans-serif;
+    color: white;
+}
 
 h1 {
-  font-weight: 600;
-  font-size: clamp(40px, 3.47vw, 50px);
-  line-height: clamp(40px, 3.47vw, 50px);
-  letter-spacing: 0.2px; }
+    font-weight: 600;
+    font-size: clamp(40px, 3.47vw, 50px);
+    line-height: clamp(40px, 3.47vw, 50px);
+    letter-spacing: 0.2px;
+}
 
 h2 {
-  font-weight: 600;
-  font-size: clamp(32px, 2.78vw, 40px);
-  line-height: clamp(45px, 3.96vw, 57px);
-  letter-spacing: 0.2px; }
+    font-weight: 600;
+    font-size: clamp(32px, 2.78vw, 40px);
+    line-height: clamp(45px, 3.96vw, 57px);
+    letter-spacing: 0.2px;
+}
 
 h4 {
-  font-weight: 400;
-  font-size: clamp(18px, 1.67vw, 24px);
-  line-height: clamp(24px, 2.03vw, 29.26px);
-  letter-spacing: 0.2px; }
+    font-weight: 400;
+    font-size: clamp(18px, 1.67vw, 24px);
+    line-height: clamp(24px, 2.03vw, 29.26px);
+    letter-spacing: 0.2px;
+}
 
 h5 {
-  font-weight: 600;
-  font-size: clamp(16px, 1.39vw, 20px);
-  line-height: clamp(28px, 2.36vw, 34px); }
+    font-weight: 600;
+    font-size: clamp(16px, 1.39vw, 20px);
+    line-height: clamp(28px, 2.36vw, 34px);
+}
 
 .entry-content {
-  font-weight: 500;
-  font-size: clamp(16px, 1.39vw, 20px);
-  line-height: clamp(24px, 2.08vw, 30px);
-  letter-spacing: 0.2px; }
+    font-weight: 500;
+    font-size: clamp(16px, 1.39vw, 20px);
+    line-height: clamp(24px, 2.08vw, 30px);
+    letter-spacing: 0.2px;
+}
 
 .card-text {
-  font-weight: 400;
-  font-size: clamp(12px, 0.97vw, 14px);
-  line-height: clamp(15px, 1.18vw, 17.07px); }
+    font-weight: 400;
+    font-size: clamp(12px, 0.97vw, 14px);
+    line-height: clamp(15px, 1.18vw, 17.07px);
+}
 
 div,
 p {
-  font-size: clamp(14px, 1.11vw, 16px);
-  line-height: clamp(18px, 1.67vw, 24px);
-  letter-spacing: 0.2px; }
+    font-size: clamp(14px, 1.11vw, 16px);
+    line-height: clamp(18px, 1.67vw, 24px);
+    letter-spacing: 0.2px;
+}
 
 h1.text-light,
 h2.text-light,
@@ -131,69 +159,89 @@ h5.text-light,
 h6.text-light,
 p.text-light,
 div.text-light {
-  color: white !important; }
+    color: white !important;
+}
+
 
 /* with clamps on all sizes we shouldn't need to do much media querying for typography */
+
 .footer-bottom {
-  width: 100%;
-  margin: 0;
-  background-color: #d1c0ac;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 13.54vw;
-  padding-right: 13.54vw;
-  padding-top: 25px;
-  padding-bottom: 20px;
-  flex-wrap: nowrap; }
-  .footer-bottom .copyright {
+    width: 100%;
+    margin: 0;
+    background-color: #d1c0ac;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 13.54vw;
+    padding-right: 13.54vw;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    flex-wrap: nowrap;
+}
+
+.footer-bottom .copyright {
     font-size: 10px;
     width: fit-content;
     line-height: 23px;
-    height: 23px; }
-  .footer-bottom .footer-social {
+    height: 23px;
+}
+
+.footer-bottom .footer-social {
     list-style: none;
     display: inline-flex;
     margin: 0;
-    width: fit-content; }
-    .footer-bottom .footer-social .social-fb {
-      content: '';
-      height: 23px;
-      width: 23px;
-      background-size: contain;
-      display: inline-block;
-      margin-right: 22px;
-      background-position: center center;
-      background-repeat: no-repeat; }
-    .footer-bottom .footer-social .social-ig {
-      content: '';
-      height: 23px;
-      width: 23px;
-      background-size: contain;
-      display: inline-block;
-      margin-right: 22px;
-      background-position: center center;
-      background-repeat: no-repeat; }
-    .footer-bottom .footer-social .social-tw,
-    .footer-bottom .footer-social .social-yt {
-      content: '';
-      height: 23px;
-      width: 23px;
-      background-size: contain;
-      display: inline-block;
-      margin-right: 22px;
-      background-position: center center;
-      background-repeat: no-repeat; }
+    width: fit-content;
+}
+
+.footer-bottom .footer-social .social-fb {
+    content: '';
+    height: 23px;
+    width: 23px;
+    background-size: contain;
+    display: inline-block;
+    margin-right: 22px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.footer-bottom .footer-social .social-ig {
+    content: '';
+    height: 23px;
+    width: 23px;
+    background-size: contain;
+    display: inline-block;
+    margin-right: 22px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.footer-bottom .footer-social .social-tw,
+.footer-bottom .footer-social .social-yt {
+    content: '';
+    height: 23px;
+    width: 23px;
+    background-size: contain;
+    display: inline-block;
+    margin-right: 22px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 
 @media (max-width: 767px) {
-  .footer-bottom {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 25px;
-    padding-bottom: 20px;
-    flex-wrap: nowrap; } }
+    .footer-bottom {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        flex-wrap: nowrap;
+    }
+}
+
 
 /* move these to colors and then create or compile colors */
+
+
 /* move these to colors and then create or compile colors */
+
 h1,
 h2,
 h3,
@@ -204,48 +252,56 @@ p,
 span,
 html,
 div {
-  font-family: "Poppins", "Open Sans", sans-serif;
-  color: white; }
+    font-family: "Poppins", "Open Sans", sans-serif;
+    color: white;
+}
 
 h1 {
-  font-weight: 600;
-  font-size: clamp(40px, 3.47vw, 50px);
-  line-height: clamp(40px, 3.47vw, 50px);
-  letter-spacing: 0.2px; }
+    font-weight: 600;
+    font-size: clamp(40px, 3.47vw, 50px);
+    line-height: clamp(40px, 3.47vw, 50px);
+    letter-spacing: 0.2px;
+}
 
 h2 {
-  font-weight: 600;
-  font-size: clamp(32px, 2.78vw, 40px);
-  line-height: clamp(45px, 3.96vw, 57px);
-  letter-spacing: 0.2px; }
+    font-weight: 600;
+    font-size: clamp(32px, 2.78vw, 40px);
+    line-height: clamp(45px, 3.96vw, 57px);
+    letter-spacing: 0.2px;
+}
 
 h4 {
-  font-weight: 400;
-  font-size: clamp(18px, 1.67vw, 24px);
-  line-height: clamp(24px, 2.03vw, 29.26px);
-  letter-spacing: 0.2px; }
+    font-weight: 400;
+    font-size: clamp(18px, 1.67vw, 24px);
+    line-height: clamp(24px, 2.03vw, 29.26px);
+    letter-spacing: 0.2px;
+}
 
 h5 {
-  font-weight: 600;
-  font-size: clamp(16px, 1.39vw, 20px);
-  line-height: clamp(28px, 2.36vw, 34px); }
+    font-weight: 600;
+    font-size: clamp(16px, 1.39vw, 20px);
+    line-height: clamp(28px, 2.36vw, 34px);
+}
 
 .entry-content {
-  font-weight: 500;
-  font-size: clamp(16px, 1.39vw, 20px);
-  line-height: clamp(24px, 2.08vw, 30px);
-  letter-spacing: 0.2px; }
+    font-weight: 500;
+    font-size: clamp(16px, 1.39vw, 20px);
+    line-height: clamp(24px, 2.08vw, 30px);
+    letter-spacing: 0.2px;
+}
 
 .card-text {
-  font-weight: 400;
-  font-size: clamp(12px, 0.97vw, 14px);
-  line-height: clamp(15px, 1.18vw, 17.07px); }
+    font-weight: 400;
+    font-size: clamp(12px, 0.97vw, 14px);
+    line-height: clamp(15px, 1.18vw, 17.07px);
+}
 
 div,
 p {
-  font-size: clamp(14px, 1.11vw, 16px);
-  line-height: clamp(18px, 1.67vw, 24px);
-  letter-spacing: 0.2px; }
+    font-size: clamp(14px, 1.11vw, 16px);
+    line-height: clamp(18px, 1.67vw, 24px);
+    letter-spacing: 0.2px;
+}
 
 h1.text-light,
 h2.text-light,
@@ -255,226 +311,314 @@ h5.text-light,
 h6.text-light,
 p.text-light,
 div.text-light {
-  color: white !important; }
+    color: white !important;
+}
+
 
 /* with clamps on all sizes we shouldn't need to do much media querying for typography */
+
 .home .site.page .siteheader {
-  position: relative;
-  z-index: 8;
-  height: 41px; }
+    position: relative;
+    z-index: 8;
+    /* height: 41px; */
+}
 
 a.skip-link.screen-reader-text {
-  display: none; }
+    display: none;
+}
 
 .sr-only {
-  display: none; }
+    display: none;
+}
+
 
 /* navbar-brand might happen outside the site header */
+
 .navbar-brand {
-  margin-right: 2.78vw;
-  font-size: 1.25rem;
-  text-decoration: none;
-  white-space: nowrap;
-  width: 29%; }
-  .navbar-brand img {
-    max-width: 100%; }
+    margin-right: 2.78vw;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 29%;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+}
 
 .siteheader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 13.54vw;
-  padding-right: 13.54vw; }
-  .siteheader #topmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 13.54vw;
+    padding-right: 13.54vw;
+}
+
+.siteheader #topmenu {
     flex-wrap: nowrap;
-    padding-top: 1.53vw; }
-    .siteheader #topmenu #menu-main-menu {
-      flex-wrap: nowrap; }
-      .siteheader #topmenu #menu-main-menu li {
-        padding-right: 2.78vw; }
-  .siteheader .topdonate {
+    padding-top: 1.53vw;
+}
+
+.siteheader #topmenu #menu-main-menu {
+    flex-wrap: nowrap;
+}
+
+.siteheader #topmenu #menu-main-menu li {
+    padding-right: 2.78vw;
+}
+
+.siteheader .topdonate {
     padding-top: 1.53vw;
     padding-bottom: .5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
-    .siteheader .topdonate .asp_product_buy_button {
-      display: flex;
-      align-items: center; }
+    justify-content: center;
+}
+
+.siteheader .topdonate .asp_product_buy_button {
+    display: flex;
+    align-items: center;
+}
 
 .navbar-nav {
-  color: white;
-  z-index: 5;
-  flex-direction: row; }
-  .navbar-nav a {
+    color: white;
+    z-index: 5;
+    flex-direction: row;
+}
+
+.navbar-nav a {
     cursor: pointer;
-    color: white; }
-    .navbar-nav a:hover {
-      background: transparent; }
-    .navbar-nav a:active {
-      background: transparent;
-      outline: 0; }
+    color: white;
+}
+
+.navbar-nav a:hover {
+    background: transparent;
+}
+
+.navbar-nav a:active {
+    background: transparent;
+    outline: 0;
+}
 
 .navbar-nav .nav-link {
-  color: white !important;
-  cursor: pointer;
-  white-space: nowrap; }
-  .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+    color: white !important;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
     color: #eb0001 !important;
-    max-height: 100%; }
+    max-height: 100%;
+}
+
 
 /* menu active */
-.menu-item > a[aria-expanded="true"] {
-  background: transparent;
-  /* color:white !important; */ }
+
+.menu-item>a[aria-expanded="true"] {
+    background: transparent;
+    /* color:white !important; */
+}
 
 ul.dropdown-menu.show {
-  border-radius: 0;
-  border-top: 5px solid rgba(0, 78, 125, 0.5);
-  margin-top: 0px;
-  min-width: 8.42vw;
-  right: -100px;
-  left: auto; }
+    border-radius: 0;
+    border-top: 5px solid rgba(0, 78, 125, 0.5);
+    margin-top: 0px;
+    min-width: 8.42vw;
+    right: -100px;
+    left: auto;
+}
 
 .dropdown-item {
-  display: block;
-  width: 100%;
-  padding: .25rem 1.5rem;
-  clear: both;
-  font-weight: 400;
-  color: #383031;
-  text-align: inherit;
-  white-space: nowrap;
-  background-color: white;
-  border: 0;
-  line-height: 21px;
-  padding: 14px 0 14px 35px; }
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #383031;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: white;
+    border: 0;
+    line-height: 21px;
+    padding: 14px 0 14px 35px;
+}
 
-.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show > .nav-link {
-  color: white; }
+.navbar-light .navbar-nav .show>.nav-link {
+    color: white;
+}
+
 
 /* carot */
-.dropdown-toggle::after {
-  /*background-image:url(img/carot-bottom.svg); */
-  content: ""; }
 
-.menu-item > a[aria-expanded="true"]::after {
-  /*
+.dropdown-toggle::after {
+    /*background-image:url(img/carot-bottom.svg); */
+    content: "";
+}
+
+.menu-item>a[aria-expanded="true"]::after {
+    /*
     background-image:url(img/carot-bottom-white.svg);
-    */ }
+    */
+}
+
 
 /* Sticky Menu */
-.sticky {
-  position: fixed !important;
-  top: 0;
-  width: 100%; }
 
-.sticky + .content {
-  padding-top: 80px; }
+.sticky {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 80px;
+}
+
 
 /* Mobile Nav */
+
 #eyepolitic_mobile_menu,
 #mobilenav_button {
-  display: none; }
+    display: none;
+}
 
 #mobilenav {
-  height: 0;
-  transition: all .4s ease-in;
-  position: absolute; }
+    height: 0;
+    transition: all .4s ease-in;
+    position: absolute;
+}
 
 @keyframes mobile_topdown {
-  from {
-    height: 0px; }
-  to {
-    height: 100vh; } }
+    from {
+        height: 0px;
+    }
+    to {
+        height: 100vh;
+    }
+}
 
 .collapsing {
-  -webkit-transition: none;
-  transition: none;
-  display: none; }
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+
 
 /* no mobile */
+
 #topmenu.nomobile {
-  width: 100%; }
+    width: 100%;
+}
 
 #menu-main-menu.nomobile {
-  width: 100%;
-  flex-grow: 1;
-  justify-content: center; }
+    width: 100%;
+    flex-grow: 1;
+    justify-content: center;
+}
+
 
 /* components */
+
+
 /* Please dont edit lines starting with /*@  */
+
+
 /* move these to colors and then create or compile colors */
+
+
 /* BUTTONS */
+
 .btn {
-  padding: 0.9vw 4.58vw;
-  font-weight: 500;
-  font-family: "Poppins", "Open Sans", sans-serif;
-  font-size: clamp(12px, 0.843vw, 14px); }
+    padding: 0.9vw 4.58vw;
+    font-weight: 500;
+    font-family: "Poppins", "Open Sans", sans-serif;
+    font-size: clamp(12px, 0.843vw, 14px);
+}
 
 .button:focus,
 .navbar-toggler:focus,
 .button:active {
-  outline: none !important;
-  box-shadow: none !important; }
+    outline: none !important;
+    box-shadow: none !important;
+}
 
 @media screen and (max-width: 767px) {
-  .btn {
-    padding: 12px 30px; } }
+    .btn {
+        padding: 12px 30px;
+    }
+}
 
 .containerwrap.contactus {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin: 0 10%;
-  border-radius: 25px; }
-  .containerwrap.contactus h3.formtitle {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0 10%;
+    border-radius: 25px;
+}
+
+.containerwrap.contactus h3.formtitle {
     text-align: center;
     color: white;
     width: 100%;
     font-size: 160%;
-    margin: 2% auto; }
-  .containerwrap.contactus .formcontainer {
+    margin: 2% auto;
+}
+
+.containerwrap.contactus .formcontainer {
     display: flex;
     align-items: center;
-    flex-direction: column; }
-    .containerwrap.contactus .formcontainer div.wpcf7 {
-      text-align: center;
-      max-width: 25%;
-      display: inline-table;
-      margin: 0 auto;
-      width: 100%; }
-    .containerwrap.contactus .formcontainer .wpcf7-form-control.wpcf7-submit {
-      padding: 1% 35%;
-      background: #fac801;
-      box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
-      border-radius: 25px;
-      margin: 3% auto;
-      position: static;
-      width: 100%; }
-    .containerwrap.contactus .formcontainer form.wpcf7-form {
-      display: inline-grid;
-      text-align: left;
-      margin: 2% auto;
-      width: 100%; }
-      .containerwrap.contactus .formcontainer form.wpcf7-form label {
-        display: grid;
-        text-align: left; }
-      .containerwrap.contactus .formcontainer form.wpcf7-form input {
-        border-radius: 30px;
-        width: 100%;
-        margin: 0 auto;
-        align-items: center;
-        display: flex; }
+    flex-direction: column;
+}
+
+.containerwrap.contactus .formcontainer div.wpcf7 {
+    text-align: center;
+    max-width: 25%;
+    display: inline-table;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.containerwrap.contactus .formcontainer .wpcf7-form-control.wpcf7-submit {
+    padding: 1% 35%;
+    background: #fac801;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    margin: 3% auto;
+    position: static;
+    width: 100%;
+}
+
+.containerwrap.contactus .formcontainer form.wpcf7-form {
+    display: inline-grid;
+    text-align: left;
+    margin: 2% auto;
+    width: 100%;
+}
+
+.containerwrap.contactus .formcontainer form.wpcf7-form label {
+    display: grid;
+    text-align: left;
+}
+
+.containerwrap.contactus .formcontainer form.wpcf7-form input {
+    border-radius: 30px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+}
 
 .containerwrap.featured-services-cards {
-  display: flex;
-  width: 100%;
-  text-align: center; }
-  .containerwrap.featured-services-cards .card {
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+.containerwrap.featured-services-cards .card {
     background: #FFFFFF;
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -482,42 +626,54 @@ ul.dropdown-menu.show {
     width: 364px;
     height: 123px;
     margin: 2%;
-    position: static; }
+    position: static;
+}
 
 .card-img,
 .card-img-top {
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-  width: 65px;
-  height: 64.97px;
-  text-align: left;
-  float: left;
-  margin: 7%; }
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    width: 65px;
+    height: 64.97px;
+    text-align: left;
+    float: left;
+    margin: 7%;
+}
 
 .card-title {
-  text-align: left;
-  margin: 12% auto;
-  max-width: 84%;
-  font-size: 95%;
-  align-items: center; }
+    text-align: left;
+    margin: 12% auto;
+    max-width: 84%;
+    font-size: 95%;
+    align-items: center;
+}
 
 .cardholder.marginbox {
-  display: contents; }
+    display: contents;
+}
 
 .card-body {
-  position: sticky;
-  padding: 0;
-  flex: auto; }
+    position: sticky;
+    padding: 0;
+    flex: auto;
+}
+
 
 /* pages - pages have precedence*/
+
+
 /* move these to colors and then create or compile colors */
+
 .hidden {
-  display: none; }
+    display: none;
+}
 
 #page-coach-upload-form {
-  padding-left: 10.97vw;
-  padding-right: 10.97vw; }
-  #page-coach-upload-form .containerwrap.coachuploadform {
+    padding-left: 10.97vw;
+    padding-right: 10.97vw;
+}
+
+#page-coach-upload-form .containerwrap.coachuploadform {
     display: flex;
     flex-direction: column;
     background: linear-gradient(116.94deg, rgba(255, 255, 255, 0.15) 24.36%, rgba(255, 255, 255, 0) 90.39%);
@@ -525,106 +681,175 @@ ul.dropdown-menu.show {
     padding: 10%;
     border-radius: 20px;
     -webkit-backface-visibility: hidden;
-    /* INPUTS */ }
-    #page-coach-upload-form .containerwrap.coachuploadform .filetype {
-      display: none; }
-      #page-coach-upload-form .containerwrap.coachuploadform .filetype.active {
-        display: flex; }
-    #page-coach-upload-form .containerwrap.coachuploadform .row {
-      display: flex;
-      flex-direction: row; }
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form input,
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form textarea {
-      border-radius: 20px; }
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form textarea {
-      padding: 1%; }
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-form-control-wrap.audio input[type="file"],
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-form-control-wrap.video input[type="file"] {
-      border-radius: 0;
-      padding: 0 1%; }
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form input[type="button"],
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form input[type="button"]::-webkit-file-upload-button,
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form input[type="file" i]::-webkit-file-upload-button,
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form input[type="button"]::file-selector-button {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #bbd4ff;
-      border-radius: 22.5px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: 2px solid #bbd4ff; }
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-submit,
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .custom-button-blue {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #bbd4ff;
-      border-radius: 22.5px;
-      width: calc(11.66vw - 4px);
-      min-width: 164px;
-      height: calc(2.69vw - 4px);
-      min-height: 35px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: none; }
-      #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-submit:after,
-      #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .custom-button-blue:after {
-        content: '';
-        display: flex;
-        position: absolute;
-        top: -4px;
-        left: -4px;
-        width: 11.66vw;
-        min-width: 168px;
-        height: 2.69vw;
-        min-height: 39px;
-        border-radius: 22.5px;
-        border: 2px solid #bbd4ff; }
-    #page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-submit {
-      margin-top: 20px; }
+    /* INPUTS */
+}
+
+#page-coach-upload-form .containerwrap.coachuploadform .filetype {
+    display: none;
+}
+
+#page-coach-upload-form .containerwrap.coachuploadform .filetype.active {
+    display: flex;
+}
+
+#page-coach-upload-form .containerwrap.coachuploadform .row {
+    display: flex;
+    flex-direction: row;
+}
+
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form input,
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form textarea {
+    border-radius: 20px;
+}
+
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form textarea {
+    padding: 1%;
+}
+
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-form-control-wrap.audio input[type="file"],
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-form-control-wrap.video input[type="file"] {
+    border-radius: 0;
+    padding: 0 1%;
+}
+
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form input[type="button"],
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form input[type="button"]::-webkit-file-upload-button,
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form input[type="file" i]::-webkit-file-upload-button,
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form input[type="button"]::file-selector-button {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #bbd4ff;
+    border-radius: 22.5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid #bbd4ff;
+}
+
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-submit,
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .custom-button-blue {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #bbd4ff;
+    border-radius: 22.5px;
+    width: calc(11.66vw - 4px);
+    min-width: 164px;
+    height: calc(2.69vw - 4px);
+    min-height: 35px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-submit:after,
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .custom-button-blue:after {
+    content: '';
+    display: flex;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 11.66vw;
+    min-width: 168px;
+    height: 2.69vw;
+    min-height: 39px;
+    border-radius: 22.5px;
+    border: 2px solid #bbd4ff;
+}
+
+#page-coach-upload-form .containerwrap.coachuploadform .wpcf7-form .wpcf7-submit {
+    margin-top: 20px;
+}
+
 
 /* page header responsive */
+
+.home .site.page .siteheader .buttongroup.signin {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .site.page .siteheader .buttongroup.signin div.button.solid {
+    background-color: #28E5BB;
+    border-radius: 20px;
+    width: clamp(110px, 12.1vw, 175px);
+    height: clamp(30px, 3.1vw, 35px);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: none;
+    display: inline-flex;
+    margin: 0 5% 0 0;
+}
+
+.home .site.page .siteheader .buttongroup.signin div.button.two {
+    background: rgba(75, 146, 255, 0.15);
+    backdrop-filter: blur(29px);
+    border-radius: 20px;
+    width: clamp(110px, 12.1vw, 175px);
+    height: clamp(30px, 3.1vw, 35px);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: 1px solid #28E5BB;
+    display: inline-flex;
+}
+
+
 /* headlines */
+
+
 /* links */
+
 a {
-  text-decoration: none;
-  color: #003b47; }
-  a:hover, a:active {
-    color: #003b47; }
+    text-decoration: none;
+    color: #003b47;
+}
+
+a:hover,
+a:active {
+    color: #003b47;
+}
 
 html {
-  height: 100%;
-  position: relative;
-  overflow-y: auto; }
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+}
 
 body {
-  background: #041021;
-  height: auto;
-  position: relative;
-  overflow: hidden; }
+    background: #041021;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
 
 html,
 body {
-  width: 100%;
-  min-width: 100vw;
-  min-height: 100vh;
-  color: #ccc;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth; }
+    width: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    color: #ccc;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
 #content,
 #page,
 #main {
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
-  height: auto;
-  min-height: 100%;
-  width: 100%;
-  overflow-x: hidden; }
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
