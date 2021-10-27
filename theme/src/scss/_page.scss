@@ -1,6 +1,6 @@
 @import 'variables';
 .hidden {
-	display: none;
+    display: none;
 }
 
 @import 'pages/home';
@@ -9,8 +9,48 @@
 
 /* page header responsive */
 
+// HEADER 
+.home {
+    .site.page {
+        .siteheader {
+            // justify-content: flex-end;
+            // width: 80%;
+            .buttongroup.signin {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                div.button.solid {
+                    background-color: #28E5BB;
+                    border-radius: 20px;
+                    width: clamp(110px, 12.1vw, 175px);
+                    height: clamp(30px, 3.1vw, 35px);
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    color: black;
+                    border: none;
+                    display: inline-flex;
+                    margin: 0 5% 0 0;
+                }
+                div.button.two {
+                    background: rgba(75, 146, 255, 0.15);
+                    backdrop-filter: blur(29px);
+                    border-radius: 20px;
+                    width: clamp(110px, 12.1vw, 175px);
+                    height: clamp(30px, 3.1vw, 35px);
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    color: black;
+                    border: 1px solid #28E5BB;
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
-	.sorce .page-header {
-	}
+    .sorce .page-header {}
 }
