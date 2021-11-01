@@ -6,7 +6,26 @@
 	font-size: clamp(12px, 0.843vw, 14px);
 }
 
-.btn-primary {
+.button.large {
+	width: fit-content;
+	padding: 1.25vw 4.51vw;
+	border-radius: 500px;
+	border: 1px solid #28e5bb;
+	display: flex;
+	align-items: center;
+	font-size: clamp(9px, 1.25vw, 18px);
+	line-height: clamp(9px, 1.25vw, 18px);
+	white-space: nowrap;
+	span.play {
+		background-image: url(img/playbutton-green.svg);
+		margin-right: 1vw;
+		width: 1.736vw;
+		height: 2.22vw;
+		background-repeat: no-repeat;
+		aspect-ratio: 25/32;
+		display: inline-flex;
+		background-size: contain;
+	}
 }
 .btn-secondary {
 }

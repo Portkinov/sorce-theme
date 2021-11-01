@@ -25,15 +25,18 @@ global $post;
         </div>
     </section>
 
+    <span class="ellipse-blue"></span>
+
     <section id="section2">
         <div class="mod background">
-            <div class="row">
+            <div class="row first">
                 <h2>Data Driven, Human Centered</h2>
                 <h5>Unlock your team's best performance</h5>
             </div>
             <div class="row">
                 <div class="col left">
-                    <div class="image overlap"></div>
+                    <div id="image1"></div>
+                    <div id="image2"></div>
                 </div>
                 <div class="col right">
                     <ul class="checkmark list">
@@ -46,6 +49,8 @@ global $post;
             </div>   
         </div>
     </section>
+
+    <span class="ellipse-purple"></span>
 
     <section id="section3">
         <div class="mod row">
