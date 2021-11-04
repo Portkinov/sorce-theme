@@ -759,7 +759,8 @@ body.home #section4 .mod.fullscreen {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    align-self: center; }
     body.home #section4 .mod.fullscreen .col.center h5 {
       font-family: "Poppins", "Open Sans", sans-serif;
       font-weight: 600;
