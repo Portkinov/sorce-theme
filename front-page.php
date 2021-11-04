@@ -66,6 +66,7 @@ global $post;
 
     <section id="section4">
         <div class="mod fullscreen">
+            <div class="col left"></div>
             <div class="col center">
                 <h2>The Science of Human Energy</h2>
                 <p>SORCE acts like an intuitive and compassionate mirror that gives individuals, teams and departments an unparalleled real-time pulse check followed by regenerative actions that unlock potential and prevent burnout. </p>
@@ -73,6 +74,7 @@ global $post;
                 <p>We do this by leveraging the power of Heart Rate Variability (HRV) and simple psychometrics in order to measure, track and treat the nervous system of your organization at scale.</p>
                 <div class="button large">Learn More</div>
             </div>
+            <div class="col right"></col>
         </div>
     </section>
 

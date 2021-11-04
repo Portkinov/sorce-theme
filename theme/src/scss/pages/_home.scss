@@ -127,6 +127,86 @@ body.home {
 			background: linear-gradient(#d0e6e6 56%, #b6b6b6 0%);
 		}
 	}
+	#section3 {
+		.mod.row {
+			display: flex;
+			.col.left {
+				width: 44.375%;
+				padding-left: 11.11vw;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				h5 {
+					font-family: $poppins;
+					font-weight: 600;
+					font-size: clamp(25px, 2.43vw, 35px);
+					line-height: clamp(32px, 3.16vw, 45.5px);
+					letter-spacing: 0.2px;
+					margin: 0;
+				}
+			}
+			.col.right {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 45.625%;
+				.image-right {
+					background: url(img/cost_burnout4.svg);
+					background-size: contain;
+					background-position: center right;
+					background-repeat: no-repeat;
+					aspect-ratio: 123 / 116;
+
+					display: flex;
+				}
+			}
+		}
+	}
+	#section4 {
+		.mod.fullscreen {
+			overflow: visible;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			position: relative;
+			.col.left {
+				content: '';
+				display: flex;
+				background: url(img/mod4-img-left.png);
+				aspect-ratio: 867 / 619;
+				width: 29.16vw;
+				overflow: visible;
+				min-height: 65.69vw;
+			}
+			.col.center {
+				width: 41.67%;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				h5 {
+					font-family: $poppins;
+					font-weight: 600;
+					font-size: clamp(25px, 2.43vw, 35px);
+					line-height: clamp(32px, 3.16vw, 45.5px);
+					letter-spacing: 0.2px;
+					margin: 0;
+				}
+				.button.large {
+					align-self: center;
+				}
+			}
+			.col.right {
+				content: '';
+				display: flex;
+				background: url(img/mod4-img-right.png);
+				aspect-ratio: 867 / 663;
+				width: 29.16vw;
+				overflow: visible;
+			}
+		}
+	}
+	#section5 {
+	}
 }
 
 @media screen and (max-width: 991px) {
