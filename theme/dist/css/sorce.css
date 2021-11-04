@@ -748,15 +748,18 @@ body.home #section4 .mod.fullscreen {
     content: '';
     display: flex;
     background: url(img/mod4-img-left.png);
-    aspect-ratio: 867 / 619;
+    aspect-ratio: 130 / 63;
     width: 29.16vw;
     overflow: visible;
+    background-size: contain;
+    background-repeat: no-repeat;
     min-height: 65.69vw; }
   body.home #section4 .mod.fullscreen .col.center {
     width: 41.67%;
     text-align: center;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: center; }
     body.home #section4 .mod.fullscreen .col.center h5 {
       font-family: "Poppins", "Open Sans", sans-serif;
       font-weight: 600;
@@ -765,14 +768,17 @@ body.home #section4 .mod.fullscreen {
       letter-spacing: 0.2px;
       margin: 0; }
     body.home #section4 .mod.fullscreen .col.center .button.large {
+      margin-top: 3.54vw;
       align-self: center; }
   body.home #section4 .mod.fullscreen .col.right {
     content: '';
     display: flex;
     background: url(img/mod4-img-right.png);
-    aspect-ratio: 867 / 663;
+    aspect-ratio: 130 / 63;
     width: 29.16vw;
-    overflow: visible; }
+    overflow: visible;
+    background-size: contain;
+    background-repeat: no-repeat; }
 
 #page-coach-upload-form {
   padding-left: 10.97vw;
