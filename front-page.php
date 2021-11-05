@@ -86,9 +86,9 @@ global $post;
             <div class="col right">
                 <h5>3 Quick Steps, Big Daily Value</h5>
                 <ol class="three-steps">
-                    <li>take your HRV score using the SORCE app</li>
-                    <li>Based on your HRV, receive audio content that caters to your energetic needs</li>
-                    <li>Get a daily read of your energy and that of your team and organization through real-time dashboards</li>
+                    <li><span class="num">1</span>take your HRV score using the SORCE app</li>
+                    <li><span class="num">2</span>Based on your HRV, receive audio content that caters to your energetic needs</li>
+                    <li><span class="num">3</span>Get a daily read of your energy and that of your team and organization through real-time dashboards</li>
                 </ol>
             </div>
         </div>
