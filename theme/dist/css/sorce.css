@@ -899,6 +899,9 @@ body.home #section4 .mod.fullscreen {
     border: 1px solid #28E5BB;
     display: inline-flex; }
 
+.home div.mod.fullscreen div.col.left h5 {
+  width: 28.7vw; }
+
 .home div.mod.background {
   z-index: 1 !important;
   position: relative !important; }
