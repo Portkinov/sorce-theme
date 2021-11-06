@@ -171,7 +171,7 @@ global $post;
 
             </div>
             <div class="col right">
-                <div class="rightimg" style="background-image:url('');"></div>
+                <div class="rightimg" style="background-image:url('../sorce-theme/theme/dist/css/img/globe.svg');"></div>
             </div>
         </div>
     </section>
@@ -179,8 +179,8 @@ global $post;
         <div class="mod row">   
             <div class="col left categories">
                 <ul class="bubbles">
-                    <li class="bubble small"><span class="inner" style="background-image:url('');"></span></li>
-                    <li class="bubble"><span class="inner" style="background-image:url('');"></span></li>
+                    <li class="bubble small"><span class="inner" style="background-image:url('../sorce-theme/theme/dist/css/img/bubble-empty.svg');"></span></li>
+                    <li class="bubble"><span class="inner" style="background-image:url('https://svgshare.com/i/bpR.svg');"></span></li>
                     <li class="bubble small"><span class="inner" style="background-image:url('');"></span></li>
                     <li class="bubble"><span class="inner" style="background-image:url('');"></span></li>
                     <li class="bubble"><span class="inner" style="background-image:url('');"></span></li>
@@ -190,8 +190,9 @@ global $post;
             </div>
             <div class="col center">
                 <h2>Ready to Get Your Energy Back?</h2>
-                <div class="button solid">Get a Demo</div>
+                <button href="#" class="button solid">Get a Demo</button>
             </div>
+
             <div class="col right categories">
                 <ul class="bubbles">
                     <li class="bubble small"><span class="inner" style="background-image:url('');"></span></li>

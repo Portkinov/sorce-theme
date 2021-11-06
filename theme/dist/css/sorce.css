@@ -988,6 +988,26 @@ body.home #section5 .mod.row {
   z-index: 1 !important;
   position: relative !important; }
 
+.home #section9 div.mod.row .col.left.categories ul li,
+.home #section9 div.mod.row .col.right.categories ul li {
+  list-style: none; }
+
+.home #section9 div.mod.row div.col.center {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto !important; }
+  .home #section9 div.mod.row div.col.center button {
+    width: clamp(200px, 16.8vw, 243px);
+    height: clamp(30px, 3.1vw, 45px);
+    background: #28E5BB;
+    border-radius: 22.5px;
+    border: none;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px; }
+
 span.ellipse-blue {
   background-color: #478BF2 !important;
   height: 396px !important;
