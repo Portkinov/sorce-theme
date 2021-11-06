@@ -78,6 +78,9 @@ div.text-light {
   backdrop-filter: blur(10px);
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 50%; }
+  .bubble.small {
+    width: 6.81vw;
+    height: 6.81vw; }
 
 /* sections */
 /* move these to colors and then create or compile colors */
