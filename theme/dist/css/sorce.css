@@ -69,6 +69,16 @@ div.text-light {
   color: white !important; }
 
 /* with clamps on all sizes we shouldn't need to do much media querying for typography */
+.bubble {
+  width: 9.03vw;
+  height: 9.03vw;
+  display: block;
+  background: rgba(4, 16, 33, 0.1);
+  box-shadow: inset 7px 0px 18px -6px rgba(40, 229, 187, 0.22), inset 2px -5px 15px rgba(75, 146, 255, 0.22), inset -5px 5px 12px 3px rgba(198, 175, 255, 0.22);
+  backdrop-filter: blur(10px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 50%; }
+
 /* sections */
 /* move these to colors and then create or compile colors */
 h1,
@@ -321,7 +331,7 @@ a.skip-link.screen-reader-text {
   cursor: pointer;
   white-space: nowrap; }
   .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
-    color: #eb0001 !important;
+    color: #fff !important;
     max-height: 100%; }
 
 /* menu active */
