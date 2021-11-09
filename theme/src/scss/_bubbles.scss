@@ -1,15 +1,41 @@
 .bubble {
-	width: 9.03vw;
-	height: 9.03vw;
-	display: block;
-	background: rgba(4, 16, 33, 0.1);
-	box-shadow: inset 7px 0px 18px -6px rgba(40, 229, 187, 0.22), inset 2px -5px 15px rgba(75, 146, 255, 0.22),
-		inset -5px 5px 12px 3px rgba(198, 175, 255, 0.22);
-	backdrop-filter: blur(10px);
-	/* Note: backdrop-filter has minimal browser support */
-	border-radius: 50%;
-	&.small {
-		width: 6.81vw;
-		height: 6.81vw;
-	}
+    width: 9.03vw;
+    height: 9.03vw;
+    display: block;
+    background: rgba(4, 16, 33, 0.1);
+    box-shadow: inset 7px 0px 18px -6px rgba(40, 229, 187, 0.22), inset 2px -5px 15px rgba(75, 146, 255, 0.22), inset -5px 5px 12px 3px rgba(198, 175, 255, 0.22);
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.small {
+        width: 6.81vw;
+        height: 6.81vw;
+        .inner {
+            // display: flex;
+            color: white;
+            width: 2.8vw;
+            height: 2.8vw;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 28px;
+            padding: 0;
+            margin: 0 auto;
+        }
+    }
+    .inner {
+        // display: flex;
+        color: white;
+        width: 4vw !important;
+        height: 3.33vw !important;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 28px;
+        padding: 2%;
+        margin: 0 auto;
+        justify-content: center !important;
+        align-items: center !important;
+    }
 }
