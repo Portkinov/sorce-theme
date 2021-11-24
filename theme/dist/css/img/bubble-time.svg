@@ -1,40 +1,9 @@
-<svg width="90" height="91" viewBox="0 0 90 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_biii_1761:1710)">
-<ellipse cx="44.6762" cy="45.6058" rx="44.6762" ry="45.1058" fill="#041021" fill-opacity="0.1"/>
-</g>
-<path d="M59.7104 47.3951C59.7104 55.6727 53.0035 62.3371 44.7684 62.3371C36.4909 62.3371 29.8264 55.6302 29.8264 47.3951C29.8264 39.1176 36.5333 32.4531 44.7684 32.4531C53.0035 32.4531 59.7104 39.1176 59.7104 47.3951Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-<path d="M44.6761 28.1562L44.6761 37.3751" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-<path d="M47.5128 28.1562H41.8397" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-<path d="M44.7258 62.3392V57.5" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-<path d="M29.7842 47.3945H35.345" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-<path d="M59.7104 47.3945H54.1072" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-<path d="M44.7258 39.8828V47.3963L50.796 53.4665" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-<defs>
-<filter id="filter0_biii_1761:1710" x="-10" y="-9.5" width="109.352" height="110.211" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feGaussianBlur in="BackgroundImage" stdDeviation="5"/>
-<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1761:1710"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1761:1710" result="shape"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feMorphology radius="3" operator="erode" in="SourceAlpha" result="effect2_innerShadow_1761:1710"/>
-<feOffset dx="-5" dy="5"/>
-<feGaussianBlur stdDeviation="6"/>
-<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.776471 0 0 0 0 0.686275 0 0 0 0 1 0 0 0 0.22 0"/>
-<feBlend mode="normal" in2="shape" result="effect2_innerShadow_1761:1710"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="2" dy="-5"/>
-<feGaussianBlur stdDeviation="7.5"/>
-<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.294118 0 0 0 0 0.572549 0 0 0 0 1 0 0 0 0.22 0"/>
-<feBlend mode="normal" in2="effect2_innerShadow_1761:1710" result="effect3_innerShadow_1761:1710"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feMorphology radius="6" operator="dilate" in="SourceAlpha" result="effect4_innerShadow_1761:1710"/>
-<feOffset dx="7"/>
-<feGaussianBlur stdDeviation="9"/>
-<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.156863 0 0 0 0 0.898039 0 0 0 0 0.733333 0 0 0 0.22 0"/>
-<feBlend mode="normal" in2="effect3_innerShadow_1761:1710" result="effect4_innerShadow_1761:1710"/>
-</filter>
-</defs>
+<svg width="44" height="50" viewBox="0 0 44 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M43.2007 27.6329C43.2007 39.3055 33.7429 48.7034 22.1302 48.7034C10.4577 48.7034 1.05981 39.2456 1.05981 27.6329C1.05981 15.9604 10.5176 6.5625 22.1302 6.5625C33.7429 6.5625 43.2007 15.9604 43.2007 27.6329Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M22 0.5L22 13.5" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M26 0.5L18 0.5" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M22.0698 48.7029V41.8789" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M1 27.6328H8.84155" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M43.2005 27.6328H35.2991" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path d="M22.0698 17.0352V27.6302L30.6297 36.1901" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
 </svg>

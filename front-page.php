@@ -173,7 +173,7 @@ global $post;
 
             </div>
             <div class="col right">
-                <div class="rightimg" style="background-image:url('../sorce-theme/theme/dist/css/img/globe.svg');"></div>
+                <div class="rightimg" style="background-image:url(<?php echo get_template_directory_uri().'/theme/dist/css/img/globe3.svg'?>);"></div>
             </div>
         </div>
     </section>
@@ -181,10 +181,10 @@ global $post;
         <div class="mod row">   
             <div class="col left categories">
                 <ul class="bubbles">
-                    <li class="bubble small"><span class="inner" style="background-image:url('../sorce-theme/theme/dist/css/img/bubble-empty.svg');"></span></li>
-                    <li class="bubble"><span class="inner" style="background-image:url('https://svgshare.com/i/bpR.svg');"></span></li>
-                    <li class="bubble small"><span class="inner" style="background-image:url('');"></span></li>
-                    <li class="bubble"><span class="inner" style="background-image:url('');"></span></li>
+                    <li class="bubble small"><span class="inner" style="background-image:url(<?php echo get_template_directory_uri().'/theme/dist/css/img/bubble-fitness.svg'?>);"></span></li>
+                    <li class="bubble"><span class="inner" style="background-image:url(<?php echo get_template_directory_uri().'/theme/dist/css/img/bubble-health.svg'?>);"></span></li>
+                    <li class="bubble small"><span class="inner" style="background-image:url(<?php echo get_template_directory_uri().'/theme/dist/css/img/bubble-scales.svg'?>);"></span></li>
+                    <li class="bubble"><span class="inner" style="background-image:url(<?php echo get_template_directory_uri().'/theme/dist/css/img/bubble-apple.svg'?>);"></span></li>
                     <li class="bubble"><span class="inner" style="background-image:url('');"></span></li>
                     <li class="bubble"><span class="inner" style="background-image:url('');"></span></li>
                     <li class="bubble"><span class="inner" style="background-image:url('');"></span></li>

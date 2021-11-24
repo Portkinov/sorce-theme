@@ -84,6 +84,23 @@
                 }
             }
         }
+        #section8 {
+            .mod.row {
+                width: 45vw;
+                .rightimg {
+                    color: white;
+                    width: 4vw !important;
+                    height: 3.33vw !important;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    top: 28px;
+                    padding: 2%;
+                    margin: 0 auto;
+                    justify-content: center !important;
+                    align-items: center !important;
+                }
+            }
+        }
     }
     
     span.ellipse-blue {
@@ -107,8 +124,6 @@
         position: absolute !important;
         z-index: -1 !important;
     }
-    
-    div.site-container.home-page {}
     
     // footer
     hr {
