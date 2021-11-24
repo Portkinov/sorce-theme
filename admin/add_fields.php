@@ -2,6 +2,7 @@
 namespace sorce\admin;
 use \Carbon_Fields\Container as Container;
 use \Carbon_Fields\Field as Field;
+use \Carbon_Fields\Block as Block;
 use \sorce\core\mvc\Control as Control;
 
 require_once( get_template_directory() .  '/core/mvc/control/modules.php');
@@ -44,17 +45,8 @@ class AddFields extends Theme  {
     /* CARBON FIELDS TAXONOMY FUNCTIONS */
     /* CARBON FIELDS POST TYPE FIELDS */
     public static function crb_add_term_meta(){
-        /*
-        Container::make('term_meta', 'Term Properties')
-        ->show_on_taxonomy('term_name')
-        ->add_fields(array(
-            Field::make('text', 'crb_branch_color', 'Color (In Hex Format)'),
-            Field::make('image', 'crb_branch_thumb', 'Featured Image'),
-            Field::make('text', 'crb_contact_form', 'Form Shortcode'),
-            Field::make('text', 'crb_contact_email', 'Contact Email Address'),
-            Field::make('text', 'crb_phone_number', 'Phone Number')
-        ));
-        */
+
+        
     }
     /* CARBON FIELDS PAGE FUNCTIONS */
     public static function crb_home_page(){
@@ -67,8 +59,121 @@ class AddFields extends Theme  {
                 ->set_type( 'video' )
                 ->set_value_type( 'url' ),
             ) );
-            
+        /* Home Blocks */
+        Block::make( __( 'Sorce Vector Carousel') )
+            ->add_fields(array(
+                Field::make('text', 'svc_title', __('Carousel Title')),
+                Field::make('radio', 'svc_show_controls', __('Show Controls?'))
+                ->set_help_text('Show left/right arrows on the Carousel?')
+                ->set_options(array('Yes', 'No')),
+                Field::make('complex', 'svc_slides', __('Slides'))
+                    ->add_fields(array(
+                    Field::make('image', 'svc_slide_img', 'Slide Image')
+                        ->set_required(true)
+                        ->set_value_type('url'),
+                    Field::make('text', 'svc_slide_title', 'Slide Title'),
+                    Field::make('rich_text', 'svc_slide_text', 'Slide Text'),
+                    Field::make('color', 'svc_slide_color', 'Bubble Color'),
+        
+                )),
+        
+            ))
+            ->set_icon('heart')
+            ->set_keywords([__('Sorce') ])
+            ->set_description(__('3D Sorce Carousel'))
+            ->set_category('layout')->set_render_callback(function ($fields, $attributes, $inner_blocks)
+        {
+            $module_title = $fields['svc_title'];
+            #controls
+            $arrows = isset($fields['svc_show_controls']) ? $fields['svc_show_controls'] : false;
+            $arrows = ($arrows === "Yes") ? true : false;
+
+            $slides = $fields['svc_slides'];
+            if($slides){
+                #containing markup
+                ?>
+                <div class="mod carousel">
+                    <h2 class="carouseltitle"><?php echo $module_title; ?></h2>
+                    <div class="indicators">
+                        <ol class="indicator-list">
+                <?php
+                    #indicators
+                $index = 0;
+                while($index < count($slides)){
+                    echo '<li class="indicator';
+                    if($index === 0 ) echo ' active';
+                    echo '" data-slide="slide'.$count.'"></li>';
+                    $index++;
+                };
+                ?>
+                        </ol>
+                    </div>
+                <?php
+                #controls
+                if($arrows && count($slides > 1)){
+                ?>
+                    <div class="carouselcontrols">
+                        <ol class="arrows">
+                            <li class="arrowleft"><a href="carouselcontrol" href="#slide<?php echo (count($slides) - 1);?>" onclick="doCarouselClick(event)">Previous</a></li>
+                            <li class="arrowright"><a href="carouselfcontrol" href="#slide1" onclick="doCarouselclick(event)">Next</a></li>
+                        </ol>
+                    </div>
+                <?php
+                }
+                ?>
+                    <div class="slides">
+                <?php
+                #slides
+                $index = 0;
+                foreach($slides as $slide){
+                    $img = $slide['svc_slide_img'];
+                    $title = $slide['svc_slide_title'];
+                    $color = $slide['svc_slide_color'];
+                ?>
+                        <div class="carousel-slide" id="slide<?php echo $index;?>">
+                            <div class="carousel-item 
+                <?php 
+                    echo ($index===0) ? ' active' : '';
+                    $index++;
+                ?>" style="background-color="
+                <?php 
+                
+                echo (isset($color) && !empty($color)) ? $color : '##28E5BB' ; 
+                
+                ?>>
+                                <img class="slideimg" src="
+                <?php 
+                    echo $img;    
+                ?>" alt="<?php echo $title ?>">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slidemetas">
+                <?php
+                };
+                $index=0;
+                foreach($slides as $slide){
+                    $title = $slide['svc_slide_title'];
+                    $text = $slide['svc_slide_text'];
+                    $color = $slide['svc_slide_color'];
+                    ?>
+                        <div class="slidemeta" id="slidemeta<?php echo $index; ?>">
+                            <h3 class="slidetitle"><?php echo $title;?></h3>
+                            <div class="slidetext"><?php echo $text;?></div>
+                        </div>
+                    <?php
+                    $index++;
+                }
+                ?>
+                    </div>
+                </div>
+                <?php
+            };
+    
+        });
     }
+            
+    
     public static function crb_coach_upload_page(){
        #example function showing both Container:: fields for Model and Modules:: for View
         $services_templates = array();

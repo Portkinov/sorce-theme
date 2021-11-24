@@ -73,7 +73,7 @@ div.text-light {
   width: 9.03vw;
   height: 9.03vw;
   display: block;
-  background: rgba(4, 16, 33, 0.1);
+  background-color: transparent;
   box-shadow: inset 7px 0px 18px -6px rgba(40, 229, 187, 0.22), inset 2px -5px 15px rgba(75, 146, 255, 0.22), inset -5px 5px 12px 3px rgba(198, 175, 255, 0.22);
   backdrop-filter: blur(10px);
   /* Note: backdrop-filter has minimal browser support */
@@ -428,6 +428,10 @@ ul.dropdown-menu.show {
   font-weight: 500;
   font-family: "Poppins", "Open Sans", sans-serif;
   font-size: clamp(12px, 0.843vw, 14px); }
+
+.button .logout-link {
+  line-height: 18px;
+  color: black; }
 
 .button.large {
   width: fit-content;

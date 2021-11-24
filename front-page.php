@@ -95,8 +95,10 @@ global $post;
     </section>
 
     <section id="section6">
+        <?php the_content(); ?>
+        <!-- start carousel 
         <div class="mod carousel">
-            <!-- start carousel -->
+            
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -123,8 +125,8 @@ global $post;
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <!-- end carousel -->
         </div>
+        end carousel -->
     </section>
     <section id="section7">
         <div class="mod quote">

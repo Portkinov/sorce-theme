@@ -5,6 +5,10 @@
 	font-family: $poppins;
 	font-size: clamp(12px, 0.843vw, 14px);
 }
+.button .logout-link{
+	line-height: 18px;
+	color: black;
+}
 
 .button.large {
 	width: fit-content;
